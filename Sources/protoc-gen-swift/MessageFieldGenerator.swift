@@ -341,6 +341,7 @@ struct MessageFieldGenerator {
             p.print(comments)
         }
         if let oneof = oneof {
+            printDeprecatedAnnotation(&p)
             p.print("\(generatorOptions.visibilitySourceSnippet)var \(swiftName): \(swiftApiType) {\n")
             p.indent()
             p.print("get {\n")
@@ -362,6 +363,7 @@ struct MessageFieldGenerator {
             p.print("}\n")
         } else if !isRepeated && !isMap && !isProto3 {
             p.print("private var \(swiftStorageName): \(swiftStorageType) = \(swiftStorageDefaultValue)\n")
+            printDeprecatedAnnotation(&p)
             p.print("\(generatorOptions.visibilitySourceSnippet)var \(swiftName): \(swiftApiType) {\n")
             p.indent()
             p.print("get {return \(swiftStorageName) ?? \(swiftDefaultValue)}\n")
@@ -369,7 +371,14 @@ struct MessageFieldGenerator {
             p.outdent()
             p.print("}\n")
         } else {
+            printDeprecatedAnnotation(&p)
             p.print("\(generatorOptions.visibilitySourceSnippet)var \(swiftName): \(swiftStorageType) = \(swiftStorageDefaultValue)\n")
+        }
+    }
+
+    private func printDeprecatedAnnotation(_ printer: inout CodePrinter) {
+        if descriptor.options.deprecated {
+            printer.print("@available(*, deprecated)\n")
         }
     }
 
@@ -378,6 +387,7 @@ struct MessageFieldGenerator {
         if comments != "" {
             p.print(comments)
         }
+        printDeprecatedAnnotation(&p)
         p.print("\(generatorOptions.visibilitySourceSnippet)var \(swiftName): \(swiftApiType) {\n")
         p.indent()
         if let oneof = oneof {

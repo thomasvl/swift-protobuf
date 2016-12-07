@@ -331,7 +331,7 @@ class FileGenerator {
         }
 
         for e in enums {
-            e.generateNested(printer: &p)
+            e.generateNested(printer: &p, file: self)
         }
 
         for m in messages {

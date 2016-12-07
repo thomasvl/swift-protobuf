@@ -415,6 +415,14 @@ class MessageGenerator {
             p.print(comments)
         }
 
+        if descriptor.options.deprecated {
+            // This message is deprecated.
+            p.print("@available(*, deprecated)\n")
+        } else if file.descriptor.options.deprecated {
+            // The file defining this message was deprecated.
+            p.print("@available(*, deprecated, message: \"The defining proto file is marked as deprecated.\")\n")
+        }
+
         p.print("\(generatorOptions.visibilitySourceSnippet)struct \(swiftRelativeName): \(swiftMessageConformance) {\n")
         p.indent()
         p.print("public var protoMessageName: String {return \"\(protoMessageName)\"}\n")
@@ -458,7 +466,7 @@ class MessageGenerator {
 
         // Nested enums
         for e in enums {
-            e.generateNested(printer: &p)
+            e.generateNested(printer: &p, file: file)
         }
 
         // Nested messages

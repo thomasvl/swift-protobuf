@@ -2015,6 +2015,7 @@ public struct Google_Protobuf_FileOptions: SwiftProtobuf.Message, SwiftProtobuf.
 
   ///   This option does nothing.
   private var _javaGenerateEqualsAndHash: Bool? = nil
+  @available(*, deprecated)
   public var javaGenerateEqualsAndHash: Bool {
     get {return _javaGenerateEqualsAndHash ?? false}
     set {_javaGenerateEqualsAndHash = newValue}

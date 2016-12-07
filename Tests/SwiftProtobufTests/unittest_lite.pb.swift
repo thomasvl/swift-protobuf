@@ -2304,6 +2304,7 @@ struct ProtobufUnittest_TestDeprecatedLite: SwiftProtobuf.Message, SwiftProtobuf
   public var unknown = SwiftProtobuf.UnknownStorage()
 
   private var _deprecatedField: Int32? = nil
+  @available(*, deprecated)
   var deprecatedField: Int32 {
     get {return _deprecatedField ?? 0}
     set {_deprecatedField = newValue}

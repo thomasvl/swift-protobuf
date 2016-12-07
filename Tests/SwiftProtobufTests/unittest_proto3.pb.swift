@@ -1324,6 +1324,7 @@ struct Proto3TestDeprecatedFields: SwiftProtobuf.Message, SwiftProtobuf.Proto3Me
   ]
 
 
+  @available(*, deprecated)
   var deprecatedInt32: Int32 = 0
 
   init() {}

@@ -105,11 +105,17 @@ class EnumCaseGenerator {
        self.comments = file.commentsFor(path: path)
     }
     func generateCase(printer: inout CodePrinter) {
-       if comments != "" {
-           printer.print("\n")
-           printer.print(comments)
-       }
-       printer.print("case \(swiftName) // = \(number)\n")
+        if comments != "" {
+            printer.print("\n")
+            printer.print(comments)
+        }
+        // Flag the value as deprecated if needed. No need to worry about
+        // the whole enum of file being deprecated here as that would cause
+        // cause any enum defintion to be deprecated.
+        if descriptor.options.deprecated {
+            printer.print("@available(*, deprecated)\n")
+        }
+        printer.print("case \(swiftName) // = \(number)\n")
     }
 }
 
@@ -154,9 +160,18 @@ class EnumGenerator {
         self.comments = file.commentsFor(path: path)
     }
 
-    func generateNested(printer: inout CodePrinter) {
+    func generateNested(printer: inout CodePrinter, file: FileGenerator) {
         printer.print("\n")
         printer.print(comments)
+
+        if descriptor.options.deprecated {
+            // This enum is deprecated.
+            printer.print("@available(*, deprecated)\n")
+        } else if file.descriptor.options.deprecated {
+            // The file defining this enum was deprecated.
+            printer.print("@available(*, deprecated, message: \"The defining proto file is marked as deprecated.\")\n")
+        }
+
         printer.print("\(generatorOptions.visibilitySourceSnippet)enum \(swiftRelativeName): SwiftProtobuf.Enum {\n")
         printer.indent()
         printer.print("\(generatorOptions.visibilitySourceSnippet)typealias RawValue = Int\n")
