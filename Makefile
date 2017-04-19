@@ -197,9 +197,12 @@ endif
 	default \
 	docs \
 	install \
+	integration-tests \
+	integration-tests-Exporting \
 	reference \
 	regenerate \
 	regenerate-conformance-protos \
+	regenerate-integration-test-protos \
 	regenerate-library-protos \
 	regenerate-plugin-protos \
 	regenerate-test-protos \
@@ -226,6 +229,7 @@ endif
 	update-proto-files
 
 .NOTPARALLEL: \
+	integration-tests-Exporting \
 	test-xcode-iOS-debug \
 	test-xcode-iOS-release \
 	test-xcode-macOS-debug \
@@ -332,6 +336,11 @@ test-plugin: build ${PROTOC_GEN_SWIFT}
 	done
 	diff -ru _test Reference
 
+integration-tests: integration-tests-Exporting
+
+integration-tests-Exporting: build
+	@(cd IntegrationTests/Exporting/Consuming && swift test)
+
 #
 # Rebuild the reference files by running the local version of protoc-gen-swift
 # against our menagerie of sample protos.
@@ -357,7 +366,7 @@ reference: build ${PROTOC_GEN_SWIFT}
 #  * protoc is built and installed
 #  * PROTOC at the top of this file is set correctly
 #
-regenerate: regenerate-library-protos regenerate-plugin-protos regenerate-test-protos regenerate-conformance-protos
+regenerate: regenerate-library-protos regenerate-plugin-protos regenerate-test-protos regenerate-conformance-protos regenerate-integration-test-protos
 
 # Rebuild just the protos included in the runtime library
 regenerate-library-protos: build ${PROTOC_GEN_SWIFT}
@@ -386,6 +395,21 @@ regenerate-test-protos: build ${PROTOC_GEN_SWIFT} Protos/generated_swift_names_e
 			--tfiws_out=Tests/SwiftProtobufTests \
 			$$t; \
 	done
+
+regenerate-integration-test-protos: build ${PROTOC_GEN_SWIFT}
+	@${GENERATE_SRCS_BASE} \
+		--tfiws_opt=Visibility=Public \
+		--tfiws_out=. \
+		IntegrationTests/Exporting/Providing/Sources/Messages.proto
+	@${GENERATE_SRCS_BASE} \
+		-I IntegrationTests/Chaining \
+		--tfiws_opt=Visibility=Public \
+		--tfiws_out=IntegrationTests/Chaining \
+		IntegrationTests/Chaining/ChainA/file_a.proto
+	@${GENERATE_SRCS_BASE} \
+		-I IntegrationTests/Chaining \
+		--tfiws_out=IntegrationTests/Chaining \
+		IntegrationTests/Chaining/ChainB/file_b.proto
 
 #
 # Collect a list of words that appear in the SwiftProtobuf library

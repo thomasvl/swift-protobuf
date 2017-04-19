@@ -12,3 +12,8 @@ mined_words.txt
 # Intermediate conformance test outputs
 failing_tests.txt
 nonexistent_tests.txt
+
+# Bits from the sub builds within the IntegrationTests.
+/IntegrationTests/Exporting/Providing/.build
+/IntegrationTests/Exporting/Providing/Package.pins
+/IntegrationTests/Exporting/Consuming/.build

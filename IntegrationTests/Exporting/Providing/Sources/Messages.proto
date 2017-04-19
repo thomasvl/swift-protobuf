@@ -1,0 +1,32 @@
+// This source file is part of the Swift.org open source project
+//
+// Copyright (c) 2014 - 2017 Apple Inc. and the Swift project authors
+// Licensed under Apache License v2.0 with Runtime Library Exception
+//
+// See http://swift.org/LICENSE.txt for license information
+// See http://swift.org/CONTRIBUTORS.txt for the list of Swift project authors
+//
+// -----------------------------------------------------------------------------
+
+syntax = "proto3";
+
+package my.package;
+
+enum MyEnum {
+    ZERO = 0;
+    ONE = 1;
+    TWO = 2;
+}
+
+message MyMessage {
+    message SubMsg {
+        string sub_field_string = 1;
+        int32 sub_field_int32 = 2;
+        bool sub_field_bool = 3;
+    }
+
+    int64 field_int64 = 1;
+    bytes field_bytes = 2;
+    SubMsg field_message = 3;
+    MyEnum field_enum = 4;
+}
