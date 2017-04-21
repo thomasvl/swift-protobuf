@@ -150,9 +150,7 @@ struct Proto2PreserveUnknownEnumUnittest_MyMessage: SwiftProtobuf.Message {
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._e {
-      try visitor.visitSingularEnumField(value: v, fieldNumber: 1)
-    }
+    if let v = self._e {try visitor.visitSingularEnumField(value: v, fieldNumber: 1)}
     if !self.repeatedE.isEmpty {
       try visitor.visitRepeatedEnumField(value: self.repeatedE, fieldNumber: 2)
     }

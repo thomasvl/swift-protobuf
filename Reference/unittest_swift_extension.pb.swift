@@ -78,9 +78,7 @@ struct ProtobufUnittest_Extend_Foo: SwiftProtobuf.Message {
       }
 
       func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-        if let v = self._a {
-          try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-        }
+        if let v = self._a {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
         try visitor.visitExtensionFields(fields: _protobuf_extensionFieldValues, start: 100, end: 1001)
         try unknownFields.traverse(visitor: &visitor)
       }
@@ -140,9 +138,7 @@ struct ProtobufUnittest_Extend_C: SwiftProtobuf.Message {
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._c {
-      try visitor.visitSingularInt64Field(value: v, fieldNumber: 999)
-    }
+    if let v = self._c {try visitor.visitSingularInt64Field(value: v, fieldNumber: 999)}
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -238,9 +234,7 @@ struct ProtobufUnittest_Extend_MsgNoStorage: SwiftProtobuf.Message, SwiftProtobu
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._x {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-    }
+    if let v = self._x {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
     try visitor.visitExtensionFields(fields: _protobuf_extensionFieldValues, start: 100, end: 201)
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -300,12 +294,8 @@ struct ProtobufUnittest_Extend_MsgUsesStorage: SwiftProtobuf.Message, SwiftProto
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      if let v = _storage._x {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
-      if let v = _storage._y {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-      }
+      if let v = _storage._x {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
+      if let v = _storage._y {try visitor.visitSingularMessageField(value: v, fieldNumber: 2)}
       try visitor.visitExtensionFields(fields: _protobuf_extensionFieldValues, start: 100, end: 201)
     }
     try unknownFields.traverse(visitor: &visitor)

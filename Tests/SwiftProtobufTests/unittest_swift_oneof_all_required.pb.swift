@@ -80,9 +80,7 @@ struct ProtobufUnittest_OneOfOptionMessage1: SwiftProtobuf.Message {
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._requiredField {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-    }
+    if let v = self._requiredField {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -120,9 +118,7 @@ struct ProtobufUnittest_OneOfOptionMessage2: SwiftProtobuf.Message {
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._requiredField {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-    }
+    if let v = self._requiredField {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
     try unknownFields.traverse(visitor: &visitor)
   }
 

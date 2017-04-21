@@ -68,9 +68,7 @@ struct Ext4MyMessage: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._c {
-        try visitor.visitSingularInt64Field(value: v, fieldNumber: 1410)
-      }
+      if let v = self._c {try visitor.visitSingularInt64Field(value: v, fieldNumber: 1410)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -115,9 +113,7 @@ struct Ext4C: SwiftProtobuf.Message {
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._c {
-      try visitor.visitSingularInt64Field(value: v, fieldNumber: 1420)
-    }
+    if let v = self._c {try visitor.visitSingularInt64Field(value: v, fieldNumber: 1420)}
     try unknownFields.traverse(visitor: &visitor)
   }
 

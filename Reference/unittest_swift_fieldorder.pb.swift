@@ -166,12 +166,8 @@ struct Swift_Protobuf_TestFieldOrderings: SwiftProtobuf.Message, SwiftProtobuf.E
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._bb {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
-      if let v = self._oo {
-        try visitor.visitSingularInt64Field(value: v, fieldNumber: 2)
-      }
+      if let v = self._bb {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
+      if let v = self._oo {try visitor.visitSingularInt64Field(value: v, fieldNumber: 2)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -210,23 +206,15 @@ struct Swift_Protobuf_TestFieldOrderings: SwiftProtobuf.Message, SwiftProtobuf.E
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      if let v = _storage._myInt {
-        try visitor.visitSingularInt64Field(value: v, fieldNumber: 1)
-      }
+      if let v = _storage._myInt {try visitor.visitSingularInt64Field(value: v, fieldNumber: 1)}
       try visitor.visitExtensionFields(fields: _protobuf_extensionFieldValues, start: 2, end: 9)
       try _storage._options?.traverse(visitor: &visitor, start: 9, end: 11)
-      if let v = _storage._myString {
-        try visitor.visitSingularStringField(value: v, fieldNumber: 11)
-      }
+      if let v = _storage._myString {try visitor.visitSingularStringField(value: v, fieldNumber: 11)}
       try visitor.visitExtensionFields(fields: _protobuf_extensionFieldValues, start: 12, end: 56)
       try _storage._options?.traverse(visitor: &visitor, start: 60, end: 61)
-      if let v = _storage._myFloat {
-        try visitor.visitSingularFloatField(value: v, fieldNumber: 101)
-      }
+      if let v = _storage._myFloat {try visitor.visitSingularFloatField(value: v, fieldNumber: 101)}
       try _storage._options?.traverse(visitor: &visitor, start: 150, end: 151)
-      if let v = _storage._optionalNestedMessage {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 200)
-      }
+      if let v = _storage._optionalNestedMessage {try visitor.visitSingularMessageField(value: v, fieldNumber: 200)}
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -425,9 +413,7 @@ struct Swift_Protobuf_OneofTraversalGeneration: SwiftProtobuf.Message, SwiftProt
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try self.oGood?.traverse(visitor: &visitor)
     try self.oConflictField?.traverse(visitor: &visitor, start: 101, end: 102)
-    if let v = self._m {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 113)
-    }
+    if let v = self._m {try visitor.visitSingularInt32Field(value: v, fieldNumber: 113)}
     try self.oConflictField?.traverse(visitor: &visitor, start: 126, end: 127)
     try visitor.visitExtensionFields(fields: _protobuf_extensionFieldValues, start: 202, end: 203)
     try self.oConflictExtensionsStart?.traverse(visitor: &visitor, start: 201, end: 227)

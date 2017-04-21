@@ -155,9 +155,7 @@ public struct Google_Protobuf_Api: SwiftProtobuf.Message {
       if !_storage._version.isEmpty {
         try visitor.visitSingularStringField(value: _storage._version, fieldNumber: 4)
       }
-      if let v = _storage._sourceContext {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
-      }
+      if let v = _storage._sourceContext {try visitor.visitSingularMessageField(value: v, fieldNumber: 5)}
       if !_storage._mixins.isEmpty {
         try visitor.visitRepeatedMessageField(value: _storage._mixins, fieldNumber: 6)
       }

@@ -653,15 +653,9 @@ struct Proto3TestAllTypes: SwiftProtobuf.Message {
       if !_storage._singleBytes.isEmpty {
         try visitor.visitSingularBytesField(value: _storage._singleBytes, fieldNumber: 15)
       }
-      if let v = _storage._singleNestedMessage {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 18)
-      }
-      if let v = _storage._singleForeignMessage {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 19)
-      }
-      if let v = _storage._singleImportMessage {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 20)
-      }
+      if let v = _storage._singleNestedMessage {try visitor.visitSingularMessageField(value: v, fieldNumber: 18)}
+      if let v = _storage._singleForeignMessage {try visitor.visitSingularMessageField(value: v, fieldNumber: 19)}
+      if let v = _storage._singleImportMessage {try visitor.visitSingularMessageField(value: v, fieldNumber: 20)}
       if _storage._singleNestedEnum != Proto3TestAllTypes.NestedEnum.nestedEnumUnspecified {
         try visitor.visitSingularEnumField(value: _storage._singleNestedEnum, fieldNumber: 21)
       }
@@ -671,9 +665,7 @@ struct Proto3TestAllTypes: SwiftProtobuf.Message {
       if _storage._singleImportEnum != Proto3ImportEnum.importEnumUnspecified {
         try visitor.visitSingularEnumField(value: _storage._singleImportEnum, fieldNumber: 23)
       }
-      if let v = _storage._singlePublicImportMessage {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 26)
-      }
+      if let v = _storage._singlePublicImportMessage {try visitor.visitSingularMessageField(value: v, fieldNumber: 26)}
       if !_storage._repeatedInt32.isEmpty {
         try visitor.visitPackedInt32Field(value: _storage._repeatedInt32, fieldNumber: 31)
       }
@@ -795,12 +787,8 @@ struct Proto3NestedTestAllTypes: SwiftProtobuf.Message {
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      if let v = _storage._child {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-      }
-      if let v = _storage._payload {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-      }
+      if let v = _storage._child {try visitor.visitSingularMessageField(value: v, fieldNumber: 1)}
+      if let v = _storage._payload {try visitor.visitSingularMessageField(value: v, fieldNumber: 2)}
       if !_storage._repeatedChild.isEmpty {
         try visitor.visitRepeatedMessageField(value: _storage._repeatedChild, fieldNumber: 3)
       }
@@ -913,9 +901,7 @@ struct Proto3TestForeignNested: SwiftProtobuf.Message {
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      if let v = _storage._foreignNested {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-      }
+      if let v = _storage._foreignNested {try visitor.visitSingularMessageField(value: v, fieldNumber: 1)}
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -994,9 +980,7 @@ struct Proto3TestRecursiveMessage: SwiftProtobuf.Message {
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      if let v = _storage._a {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-      }
+      if let v = _storage._a {try visitor.visitSingularMessageField(value: v, fieldNumber: 1)}
       if _storage._i != 0 {
         try visitor.visitSingularInt32Field(value: _storage._i, fieldNumber: 2)
       }
@@ -1038,9 +1022,7 @@ struct Proto3TestMutualRecursionA: SwiftProtobuf.Message {
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      if let v = _storage._bb {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-      }
+      if let v = _storage._bb {try visitor.visitSingularMessageField(value: v, fieldNumber: 1)}
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -1084,9 +1066,7 @@ struct Proto3TestMutualRecursionB: SwiftProtobuf.Message {
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      if let v = _storage._a {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-      }
+      if let v = _storage._a {try visitor.visitSingularMessageField(value: v, fieldNumber: 1)}
       if _storage._optionalInt32 != 0 {
         try visitor.visitSingularInt32Field(value: _storage._optionalInt32, fieldNumber: 2)
       }
@@ -1206,9 +1186,7 @@ struct Proto3TestCamelCaseFieldNames: SwiftProtobuf.Message {
       if _storage._enumField != Proto3ForeignEnum.foreignUnspecified {
         try visitor.visitSingularEnumField(value: _storage._enumField, fieldNumber: 3)
       }
-      if let v = _storage._messageField {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
-      }
+      if let v = _storage._messageField {try visitor.visitSingularMessageField(value: v, fieldNumber: 4)}
       if !_storage._repeatedPrimitiveField.isEmpty {
         try visitor.visitPackedInt32Field(value: _storage._repeatedPrimitiveField, fieldNumber: 7)
       }
@@ -1322,9 +1300,7 @@ struct Proto3TestFieldOrderings: SwiftProtobuf.Message {
       if _storage._myFloat != 0 {
         try visitor.visitSingularFloatField(value: _storage._myFloat, fieldNumber: 101)
       }
-      if let v = _storage._singleNestedMessage {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 200)
-      }
+      if let v = _storage._singleNestedMessage {try visitor.visitSingularMessageField(value: v, fieldNumber: 200)}
     }
     try unknownFields.traverse(visitor: &visitor)
   }

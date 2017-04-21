@@ -663,9 +663,7 @@ struct ProtobufUnittest_Message3: SwiftProtobuf.Message {
       if !_storage._optionalBytes.isEmpty {
         try visitor.visitSingularBytesField(value: _storage._optionalBytes, fieldNumber: 15)
       }
-      if let v = _storage._optionalMessage {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 18)
-      }
+      if let v = _storage._optionalMessage {try visitor.visitSingularMessageField(value: v, fieldNumber: 18)}
       if _storage._optionalEnum != ProtobufUnittest_Message3.Enum.foo {
         try visitor.visitSingularEnumField(value: _storage._optionalEnum, fieldNumber: 19)
       }
@@ -833,9 +831,7 @@ struct ProtobufUnittest_Msg3UsesStorage: SwiftProtobuf.Message {
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      if let v = _storage._y {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 999)
-      }
+      if let v = _storage._y {try visitor.visitSingularMessageField(value: v, fieldNumber: 999)}
     }
     try unknownFields.traverse(visitor: &visitor)
   }

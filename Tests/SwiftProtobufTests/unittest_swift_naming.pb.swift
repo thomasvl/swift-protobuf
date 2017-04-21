@@ -2986,672 +2986,228 @@ struct SwiftUnittest_Names_FieldNames: SwiftProtobuf.Message {
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      if let v = _storage._string {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
-      if let v = _storage._int {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 2)
-      }
-      if let v = _storage._double {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 3)
-      }
-      if let v = _storage._float {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 4)
-      }
-      if let v = _storage._uint {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 5)
-      }
-      if let v = _storage._hashValue_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 6)
-      }
-      if let v = _storage._description_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 7)
-      }
-      if let v = _storage._debugDescription_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 8)
-      }
-      if let v = _storage._swift {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 9)
-      }
-      if let v = _storage._unrecognized {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 10)
-      }
-      if let v = _storage._class_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 11)
-      }
-      if let v = _storage._deinit_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 12)
-      }
-      if let v = _storage._enum_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 13)
-      }
-      if let v = _storage._func_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 15)
-      }
-      if let v = _storage._import_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 16)
-      }
-      if let v = _storage._init_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 17)
-      }
-      if let v = _storage._inout_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 18)
-      }
-      if let v = _storage._internal_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 19)
-      }
-      if let v = _storage._let_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 20)
-      }
-      if let v = _storage._operator_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 21)
-      }
-      if let v = _storage._private_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 22)
-      }
-      if let v = _storage._protocol_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 23)
-      }
-      if let v = _storage._public_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 24)
-      }
-      if let v = _storage._static_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 25)
-      }
-      if let v = _storage._struct_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 26)
-      }
-      if let v = _storage._subscript_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 27)
-      }
-      if let v = _storage._typealias_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 28)
-      }
-      if let v = _storage._var_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 29)
-      }
-      if let v = _storage._break_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 30)
-      }
-      if let v = _storage._case_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 31)
-      }
-      if let v = _storage._continue_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 32)
-      }
-      if let v = _storage._default_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 33)
-      }
-      if let v = _storage._defer_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 34)
-      }
-      if let v = _storage._do_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 35)
-      }
-      if let v = _storage._else_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 36)
-      }
-      if let v = _storage._fallthrough_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 37)
-      }
-      if let v = _storage._for_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 38)
-      }
-      if let v = _storage._guard_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 39)
-      }
-      if let v = _storage._if_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 40)
-      }
-      if let v = _storage._in_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 41)
-      }
-      if let v = _storage._repeat_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 42)
-      }
-      if let v = _storage._return_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 43)
-      }
-      if let v = _storage._switch_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 44)
-      }
-      if let v = _storage._where_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 45)
-      }
-      if let v = _storage._while_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 46)
-      }
-      if let v = _storage._as_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 47)
-      }
-      if let v = _storage._catch_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 48)
-      }
-      if let v = _storage._dynamicType_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 49)
-      }
-      if let v = _storage._false_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 50)
-      }
-      if let v = _storage._is_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 51)
-      }
-      if let v = _storage._nil_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 52)
-      }
-      if let v = _storage._rethrows_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 53)
-      }
-      if let v = _storage._super_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 54)
-      }
-      if let v = _storage._self_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 55)
-      }
-      if let v = _storage._throw_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 57)
-      }
-      if let v = _storage._throws_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 58)
-      }
-      if let v = _storage._true_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 59)
-      }
-      if let v = _storage._try_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 60)
-      }
-      if let v = _storage.__Column__ {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 61)
-      }
-      if let v = _storage.__File__ {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 62)
-      }
-      if let v = _storage.__Function__ {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 63)
-      }
-      if let v = _storage.__Line__ {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 64)
-      }
-      if let v = _storage.____ {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 65)
-      }
-      if let v = _storage._associativity {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 66)
-      }
-      if let v = _storage._convenience {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 67)
-      }
-      if let v = _storage._dynamic {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 68)
-      }
-      if let v = _storage._didSet {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 69)
-      }
-      if let v = _storage._final {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 70)
-      }
-      if let v = _storage._get {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 71)
-      }
-      if let v = _storage._infix {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 72)
-      }
-      if let v = _storage._indirect {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 73)
-      }
-      if let v = _storage._lazy {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 74)
-      }
-      if let v = _storage._left {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 75)
-      }
-      if let v = _storage._mutating {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 76)
-      }
-      if let v = _storage._none {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 77)
-      }
-      if let v = _storage._nonmutating {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 78)
-      }
-      if let v = _storage._optional {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 79)
-      }
-      if let v = _storage._override {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 80)
-      }
-      if let v = _storage._postfix {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 81)
-      }
-      if let v = _storage._precedence {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 82)
-      }
-      if let v = _storage._prefix {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 83)
-      }
-      if let v = _storage._required {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 85)
-      }
-      if let v = _storage._right {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 86)
-      }
-      if let v = _storage._set {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 87)
-      }
-      if let v = _storage._type {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 88)
-      }
-      if let v = _storage._unowned {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 89)
-      }
-      if let v = _storage._weak {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 90)
-      }
-      if let v = _storage._willSet {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 91)
-      }
-      if let v = _storage._id {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 92)
-      }
-      if let v = _storage._cmd {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 93)
-      }
-      if let v = _storage._out {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 96)
-      }
-      if let v = _storage._bycopy {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 98)
-      }
-      if let v = _storage._byref {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 99)
-      }
-      if let v = _storage._oneway {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 100)
-      }
-      if let v = _storage._and {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 102)
-      }
-      if let v = _storage._andEq {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 103)
-      }
-      if let v = _storage._alignas {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 104)
-      }
-      if let v = _storage._alignof {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 105)
-      }
-      if let v = _storage._asm {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 106)
-      }
-      if let v = _storage._auto {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 107)
-      }
-      if let v = _storage._bitand {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 108)
-      }
-      if let v = _storage._bitor {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 109)
-      }
-      if let v = _storage._bool {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 110)
-      }
-      if let v = _storage._char {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 114)
-      }
-      if let v = _storage._char16T {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 115)
-      }
-      if let v = _storage._char32T {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 116)
-      }
-      if let v = _storage._compl {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 118)
-      }
-      if let v = _storage._const {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 119)
-      }
-      if let v = _storage._constexpr {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 120)
-      }
-      if let v = _storage._constCast {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 121)
-      }
-      if let v = _storage._decltype {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 123)
-      }
-      if let v = _storage._delete {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 125)
-      }
-      if let v = _storage._dynamicCast {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 127)
-      }
-      if let v = _storage._explicit {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 130)
-      }
-      if let v = _storage._export {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 131)
-      }
-      if let v = _storage._extern {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 132)
-      }
-      if let v = _storage._friend {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 136)
-      }
-      if let v = _storage._goto {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 137)
-      }
-      if let v = _storage._inline {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 139)
-      }
-      if let v = _storage._long {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 141)
-      }
-      if let v = _storage._mutable {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 142)
-      }
-      if let v = _storage._namespace {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 143)
-      }
-      if let v = _storage._new {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 144)
-      }
-      if let v = _storage._noexcept {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 145)
-      }
-      if let v = _storage._not {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 146)
-      }
-      if let v = _storage._notEq {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 147)
-      }
-      if let v = _storage._nullptr {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 148)
-      }
-      if let v = _storage._or {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 150)
-      }
-      if let v = _storage._orEq {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 151)
-      }
-      if let v = _storage._protected {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 153)
-      }
-      if let v = _storage._register {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 155)
-      }
-      if let v = _storage._reinterpretCast {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 156)
-      }
-      if let v = _storage._short {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 158)
-      }
-      if let v = _storage._signed {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 159)
-      }
-      if let v = _storage._sizeof {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 160)
-      }
-      if let v = _storage._staticAssert {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 162)
-      }
-      if let v = _storage._staticCast {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 163)
-      }
-      if let v = _storage._template {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 166)
-      }
-      if let v = _storage._this {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 167)
-      }
-      if let v = _storage._threadLocal {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 168)
-      }
-      if let v = _storage._typedef {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 172)
-      }
-      if let v = _storage._typeid {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 173)
-      }
-      if let v = _storage._typename {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 174)
-      }
-      if let v = _storage._union {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 175)
-      }
-      if let v = _storage._unsigned {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 176)
-      }
-      if let v = _storage._using {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 177)
-      }
-      if let v = _storage._virtual {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 178)
-      }
-      if let v = _storage._void {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 179)
-      }
-      if let v = _storage._volatile {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 180)
-      }
-      if let v = _storage._wcharT {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 181)
-      }
-      if let v = _storage._xor {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 183)
-      }
-      if let v = _storage._xorEq {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 184)
-      }
-      if let v = _storage._restrict {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 185)
-      }
-      if let v = _storage._category {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 186)
-      }
-      if let v = _storage._ivar {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 187)
-      }
-      if let v = _storage._method {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 188)
-      }
-      if let v = _storage._finalize {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 192)
-      }
-      if let v = _storage._hash_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 193)
-      }
-      if let v = _storage._dealloc {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 194)
-      }
-      if let v = _storage._superclass {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 197)
-      }
-      if let v = _storage._retain {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 198)
-      }
-      if let v = _storage._release {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 199)
-      }
-      if let v = _storage._autorelease {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 200)
-      }
-      if let v = _storage._retainCount {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 201)
-      }
-      if let v = _storage._zone {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 202)
-      }
-      if let v = _storage._isProxy {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 203)
-      }
-      if let v = _storage._copy {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 204)
-      }
-      if let v = _storage._mutableCopy {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 205)
-      }
-      if let v = _storage._classForCoder {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 206)
-      }
-      if let v = _storage._clear_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 207)
-      }
-      if let v = _storage._data {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 208)
-      }
-      if let v = _storage._delimitedData {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 209)
-      }
-      if let v = _storage._descriptor {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 210)
-      }
-      if let v = _storage._extensionRegistry {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 211)
-      }
-      if let v = _storage._extensionsCurrentlySet {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 212)
-      }
-      if let v = _storage._isInitialized_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 213)
-      }
-      if let v = _storage._serializedSize {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 214)
-      }
-      if let v = _storage._sortedExtensionsInUse {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 215)
-      }
-      if let v = _storage._unknownFields_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 216)
-      }
-      if let v = _storage._fixed {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 217)
-      }
-      if let v = _storage._fract {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 218)
-      }
-      if let v = _storage._size {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 219)
-      }
-      if let v = _storage._logicalAddress {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 220)
-      }
-      if let v = _storage._physicalAddress {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 221)
-      }
-      if let v = _storage._byteCount {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 222)
-      }
-      if let v = _storage._byteOffset {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 223)
-      }
-      if let v = _storage._duration {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 224)
-      }
-      if let v = _storage._absoluteTime {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 225)
-      }
-      if let v = _storage._optionBits {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 226)
-      }
-      if let v = _storage._itemCount {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 227)
-      }
-      if let v = _storage._pbversion {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 228)
-      }
-      if let v = _storage._scriptCode {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 229)
-      }
-      if let v = _storage._langCode {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 230)
-      }
-      if let v = _storage._regionCode {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 231)
-      }
-      if let v = _storage._ostype {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 232)
-      }
-      if let v = _storage._processSerialNumber {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 233)
-      }
-      if let v = _storage._point {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 234)
-      }
-      if let v = _storage._rect {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 235)
-      }
-      if let v = _storage._fixedPoint {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 236)
-      }
-      if let v = _storage._fixedRect {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 237)
-      }
-      if let v = _storage._style {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 238)
-      }
-      if let v = _storage._styleParameter {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 239)
-      }
-      if let v = _storage._styleField {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 240)
-      }
-      if let v = _storage._timeScale {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 241)
-      }
-      if let v = _storage._timeBase {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 242)
-      }
-      if let v = _storage._timeRecord {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 243)
-      }
-      if let v = _storage._jsonShouldBeOverriden {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 244)
-      }
-      if let v = _storage._any {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 245)
-      }
-      if let v = _storage._int32 {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 246)
-      }
-      if let v = _storage._int64 {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 247)
-      }
-      if let v = _storage._uint32 {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 250)
-      }
-      if let v = _storage._uint64 {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 251)
-      }
-      if let v = _storage._associatedtype_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 252)
-      }
-      if let v = _storage._fileprivate_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 253)
-      }
-      if let v = _storage._open_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 254)
-      }
-      if let v = _storage._serializedData {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 255)
-      }
-      if let v = _storage._hasSerializedData_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 256)
-      }
-      if let v = _storage._clearSerializedData_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 257)
-      }
-      if let v = _storage._jsonUtf8Data {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 258)
-      }
-      if let v = _storage._jsonString {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 259)
-      }
-      if let v = _storage._extension_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 260)
-      }
-      if let v = _storage._extensions {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 261)
-      }
+      if let v = _storage._string {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
+      if let v = _storage._int {try visitor.visitSingularInt32Field(value: v, fieldNumber: 2)}
+      if let v = _storage._double {try visitor.visitSingularInt32Field(value: v, fieldNumber: 3)}
+      if let v = _storage._float {try visitor.visitSingularInt32Field(value: v, fieldNumber: 4)}
+      if let v = _storage._uint {try visitor.visitSingularInt32Field(value: v, fieldNumber: 5)}
+      if let v = _storage._hashValue_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 6)}
+      if let v = _storage._description_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 7)}
+      if let v = _storage._debugDescription_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 8)}
+      if let v = _storage._swift {try visitor.visitSingularInt32Field(value: v, fieldNumber: 9)}
+      if let v = _storage._unrecognized {try visitor.visitSingularInt32Field(value: v, fieldNumber: 10)}
+      if let v = _storage._class_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 11)}
+      if let v = _storage._deinit_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 12)}
+      if let v = _storage._enum_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 13)}
+      if let v = _storage._func_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 15)}
+      if let v = _storage._import_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 16)}
+      if let v = _storage._init_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 17)}
+      if let v = _storage._inout_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 18)}
+      if let v = _storage._internal_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 19)}
+      if let v = _storage._let_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 20)}
+      if let v = _storage._operator_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 21)}
+      if let v = _storage._private_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 22)}
+      if let v = _storage._protocol_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 23)}
+      if let v = _storage._public_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 24)}
+      if let v = _storage._static_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 25)}
+      if let v = _storage._struct_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 26)}
+      if let v = _storage._subscript_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 27)}
+      if let v = _storage._typealias_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 28)}
+      if let v = _storage._var_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 29)}
+      if let v = _storage._break_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 30)}
+      if let v = _storage._case_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 31)}
+      if let v = _storage._continue_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 32)}
+      if let v = _storage._default_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 33)}
+      if let v = _storage._defer_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 34)}
+      if let v = _storage._do_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 35)}
+      if let v = _storage._else_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 36)}
+      if let v = _storage._fallthrough_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 37)}
+      if let v = _storage._for_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 38)}
+      if let v = _storage._guard_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 39)}
+      if let v = _storage._if_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 40)}
+      if let v = _storage._in_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 41)}
+      if let v = _storage._repeat_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 42)}
+      if let v = _storage._return_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 43)}
+      if let v = _storage._switch_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 44)}
+      if let v = _storage._where_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 45)}
+      if let v = _storage._while_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 46)}
+      if let v = _storage._as_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 47)}
+      if let v = _storage._catch_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 48)}
+      if let v = _storage._dynamicType_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 49)}
+      if let v = _storage._false_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 50)}
+      if let v = _storage._is_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 51)}
+      if let v = _storage._nil_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 52)}
+      if let v = _storage._rethrows_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 53)}
+      if let v = _storage._super_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 54)}
+      if let v = _storage._self_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 55)}
+      if let v = _storage._throw_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 57)}
+      if let v = _storage._throws_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 58)}
+      if let v = _storage._true_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 59)}
+      if let v = _storage._try_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 60)}
+      if let v = _storage.__Column__ {try visitor.visitSingularInt32Field(value: v, fieldNumber: 61)}
+      if let v = _storage.__File__ {try visitor.visitSingularInt32Field(value: v, fieldNumber: 62)}
+      if let v = _storage.__Function__ {try visitor.visitSingularInt32Field(value: v, fieldNumber: 63)}
+      if let v = _storage.__Line__ {try visitor.visitSingularInt32Field(value: v, fieldNumber: 64)}
+      if let v = _storage.____ {try visitor.visitSingularInt32Field(value: v, fieldNumber: 65)}
+      if let v = _storage._associativity {try visitor.visitSingularInt32Field(value: v, fieldNumber: 66)}
+      if let v = _storage._convenience {try visitor.visitSingularInt32Field(value: v, fieldNumber: 67)}
+      if let v = _storage._dynamic {try visitor.visitSingularInt32Field(value: v, fieldNumber: 68)}
+      if let v = _storage._didSet {try visitor.visitSingularInt32Field(value: v, fieldNumber: 69)}
+      if let v = _storage._final {try visitor.visitSingularInt32Field(value: v, fieldNumber: 70)}
+      if let v = _storage._get {try visitor.visitSingularInt32Field(value: v, fieldNumber: 71)}
+      if let v = _storage._infix {try visitor.visitSingularInt32Field(value: v, fieldNumber: 72)}
+      if let v = _storage._indirect {try visitor.visitSingularInt32Field(value: v, fieldNumber: 73)}
+      if let v = _storage._lazy {try visitor.visitSingularInt32Field(value: v, fieldNumber: 74)}
+      if let v = _storage._left {try visitor.visitSingularInt32Field(value: v, fieldNumber: 75)}
+      if let v = _storage._mutating {try visitor.visitSingularInt32Field(value: v, fieldNumber: 76)}
+      if let v = _storage._none {try visitor.visitSingularInt32Field(value: v, fieldNumber: 77)}
+      if let v = _storage._nonmutating {try visitor.visitSingularInt32Field(value: v, fieldNumber: 78)}
+      if let v = _storage._optional {try visitor.visitSingularInt32Field(value: v, fieldNumber: 79)}
+      if let v = _storage._override {try visitor.visitSingularInt32Field(value: v, fieldNumber: 80)}
+      if let v = _storage._postfix {try visitor.visitSingularInt32Field(value: v, fieldNumber: 81)}
+      if let v = _storage._precedence {try visitor.visitSingularInt32Field(value: v, fieldNumber: 82)}
+      if let v = _storage._prefix {try visitor.visitSingularInt32Field(value: v, fieldNumber: 83)}
+      if let v = _storage._required {try visitor.visitSingularInt32Field(value: v, fieldNumber: 85)}
+      if let v = _storage._right {try visitor.visitSingularInt32Field(value: v, fieldNumber: 86)}
+      if let v = _storage._set {try visitor.visitSingularInt32Field(value: v, fieldNumber: 87)}
+      if let v = _storage._type {try visitor.visitSingularInt32Field(value: v, fieldNumber: 88)}
+      if let v = _storage._unowned {try visitor.visitSingularInt32Field(value: v, fieldNumber: 89)}
+      if let v = _storage._weak {try visitor.visitSingularInt32Field(value: v, fieldNumber: 90)}
+      if let v = _storage._willSet {try visitor.visitSingularInt32Field(value: v, fieldNumber: 91)}
+      if let v = _storage._id {try visitor.visitSingularInt32Field(value: v, fieldNumber: 92)}
+      if let v = _storage._cmd {try visitor.visitSingularInt32Field(value: v, fieldNumber: 93)}
+      if let v = _storage._out {try visitor.visitSingularInt32Field(value: v, fieldNumber: 96)}
+      if let v = _storage._bycopy {try visitor.visitSingularInt32Field(value: v, fieldNumber: 98)}
+      if let v = _storage._byref {try visitor.visitSingularInt32Field(value: v, fieldNumber: 99)}
+      if let v = _storage._oneway {try visitor.visitSingularInt32Field(value: v, fieldNumber: 100)}
+      if let v = _storage._and {try visitor.visitSingularInt32Field(value: v, fieldNumber: 102)}
+      if let v = _storage._andEq {try visitor.visitSingularInt32Field(value: v, fieldNumber: 103)}
+      if let v = _storage._alignas {try visitor.visitSingularInt32Field(value: v, fieldNumber: 104)}
+      if let v = _storage._alignof {try visitor.visitSingularInt32Field(value: v, fieldNumber: 105)}
+      if let v = _storage._asm {try visitor.visitSingularInt32Field(value: v, fieldNumber: 106)}
+      if let v = _storage._auto {try visitor.visitSingularInt32Field(value: v, fieldNumber: 107)}
+      if let v = _storage._bitand {try visitor.visitSingularInt32Field(value: v, fieldNumber: 108)}
+      if let v = _storage._bitor {try visitor.visitSingularInt32Field(value: v, fieldNumber: 109)}
+      if let v = _storage._bool {try visitor.visitSingularInt32Field(value: v, fieldNumber: 110)}
+      if let v = _storage._char {try visitor.visitSingularInt32Field(value: v, fieldNumber: 114)}
+      if let v = _storage._char16T {try visitor.visitSingularInt32Field(value: v, fieldNumber: 115)}
+      if let v = _storage._char32T {try visitor.visitSingularInt32Field(value: v, fieldNumber: 116)}
+      if let v = _storage._compl {try visitor.visitSingularInt32Field(value: v, fieldNumber: 118)}
+      if let v = _storage._const {try visitor.visitSingularInt32Field(value: v, fieldNumber: 119)}
+      if let v = _storage._constexpr {try visitor.visitSingularInt32Field(value: v, fieldNumber: 120)}
+      if let v = _storage._constCast {try visitor.visitSingularInt32Field(value: v, fieldNumber: 121)}
+      if let v = _storage._decltype {try visitor.visitSingularInt32Field(value: v, fieldNumber: 123)}
+      if let v = _storage._delete {try visitor.visitSingularInt32Field(value: v, fieldNumber: 125)}
+      if let v = _storage._dynamicCast {try visitor.visitSingularInt32Field(value: v, fieldNumber: 127)}
+      if let v = _storage._explicit {try visitor.visitSingularInt32Field(value: v, fieldNumber: 130)}
+      if let v = _storage._export {try visitor.visitSingularInt32Field(value: v, fieldNumber: 131)}
+      if let v = _storage._extern {try visitor.visitSingularInt32Field(value: v, fieldNumber: 132)}
+      if let v = _storage._friend {try visitor.visitSingularInt32Field(value: v, fieldNumber: 136)}
+      if let v = _storage._goto {try visitor.visitSingularInt32Field(value: v, fieldNumber: 137)}
+      if let v = _storage._inline {try visitor.visitSingularInt32Field(value: v, fieldNumber: 139)}
+      if let v = _storage._long {try visitor.visitSingularInt32Field(value: v, fieldNumber: 141)}
+      if let v = _storage._mutable {try visitor.visitSingularInt32Field(value: v, fieldNumber: 142)}
+      if let v = _storage._namespace {try visitor.visitSingularInt32Field(value: v, fieldNumber: 143)}
+      if let v = _storage._new {try visitor.visitSingularInt32Field(value: v, fieldNumber: 144)}
+      if let v = _storage._noexcept {try visitor.visitSingularInt32Field(value: v, fieldNumber: 145)}
+      if let v = _storage._not {try visitor.visitSingularInt32Field(value: v, fieldNumber: 146)}
+      if let v = _storage._notEq {try visitor.visitSingularInt32Field(value: v, fieldNumber: 147)}
+      if let v = _storage._nullptr {try visitor.visitSingularInt32Field(value: v, fieldNumber: 148)}
+      if let v = _storage._or {try visitor.visitSingularInt32Field(value: v, fieldNumber: 150)}
+      if let v = _storage._orEq {try visitor.visitSingularInt32Field(value: v, fieldNumber: 151)}
+      if let v = _storage._protected {try visitor.visitSingularInt32Field(value: v, fieldNumber: 153)}
+      if let v = _storage._register {try visitor.visitSingularInt32Field(value: v, fieldNumber: 155)}
+      if let v = _storage._reinterpretCast {try visitor.visitSingularInt32Field(value: v, fieldNumber: 156)}
+      if let v = _storage._short {try visitor.visitSingularInt32Field(value: v, fieldNumber: 158)}
+      if let v = _storage._signed {try visitor.visitSingularInt32Field(value: v, fieldNumber: 159)}
+      if let v = _storage._sizeof {try visitor.visitSingularInt32Field(value: v, fieldNumber: 160)}
+      if let v = _storage._staticAssert {try visitor.visitSingularInt32Field(value: v, fieldNumber: 162)}
+      if let v = _storage._staticCast {try visitor.visitSingularInt32Field(value: v, fieldNumber: 163)}
+      if let v = _storage._template {try visitor.visitSingularInt32Field(value: v, fieldNumber: 166)}
+      if let v = _storage._this {try visitor.visitSingularInt32Field(value: v, fieldNumber: 167)}
+      if let v = _storage._threadLocal {try visitor.visitSingularInt32Field(value: v, fieldNumber: 168)}
+      if let v = _storage._typedef {try visitor.visitSingularInt32Field(value: v, fieldNumber: 172)}
+      if let v = _storage._typeid {try visitor.visitSingularInt32Field(value: v, fieldNumber: 173)}
+      if let v = _storage._typename {try visitor.visitSingularInt32Field(value: v, fieldNumber: 174)}
+      if let v = _storage._union {try visitor.visitSingularInt32Field(value: v, fieldNumber: 175)}
+      if let v = _storage._unsigned {try visitor.visitSingularInt32Field(value: v, fieldNumber: 176)}
+      if let v = _storage._using {try visitor.visitSingularInt32Field(value: v, fieldNumber: 177)}
+      if let v = _storage._virtual {try visitor.visitSingularInt32Field(value: v, fieldNumber: 178)}
+      if let v = _storage._void {try visitor.visitSingularInt32Field(value: v, fieldNumber: 179)}
+      if let v = _storage._volatile {try visitor.visitSingularInt32Field(value: v, fieldNumber: 180)}
+      if let v = _storage._wcharT {try visitor.visitSingularInt32Field(value: v, fieldNumber: 181)}
+      if let v = _storage._xor {try visitor.visitSingularInt32Field(value: v, fieldNumber: 183)}
+      if let v = _storage._xorEq {try visitor.visitSingularInt32Field(value: v, fieldNumber: 184)}
+      if let v = _storage._restrict {try visitor.visitSingularInt32Field(value: v, fieldNumber: 185)}
+      if let v = _storage._category {try visitor.visitSingularInt32Field(value: v, fieldNumber: 186)}
+      if let v = _storage._ivar {try visitor.visitSingularInt32Field(value: v, fieldNumber: 187)}
+      if let v = _storage._method {try visitor.visitSingularInt32Field(value: v, fieldNumber: 188)}
+      if let v = _storage._finalize {try visitor.visitSingularInt32Field(value: v, fieldNumber: 192)}
+      if let v = _storage._hash_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 193)}
+      if let v = _storage._dealloc {try visitor.visitSingularInt32Field(value: v, fieldNumber: 194)}
+      if let v = _storage._superclass {try visitor.visitSingularInt32Field(value: v, fieldNumber: 197)}
+      if let v = _storage._retain {try visitor.visitSingularInt32Field(value: v, fieldNumber: 198)}
+      if let v = _storage._release {try visitor.visitSingularInt32Field(value: v, fieldNumber: 199)}
+      if let v = _storage._autorelease {try visitor.visitSingularInt32Field(value: v, fieldNumber: 200)}
+      if let v = _storage._retainCount {try visitor.visitSingularInt32Field(value: v, fieldNumber: 201)}
+      if let v = _storage._zone {try visitor.visitSingularInt32Field(value: v, fieldNumber: 202)}
+      if let v = _storage._isProxy {try visitor.visitSingularInt32Field(value: v, fieldNumber: 203)}
+      if let v = _storage._copy {try visitor.visitSingularInt32Field(value: v, fieldNumber: 204)}
+      if let v = _storage._mutableCopy {try visitor.visitSingularInt32Field(value: v, fieldNumber: 205)}
+      if let v = _storage._classForCoder {try visitor.visitSingularInt32Field(value: v, fieldNumber: 206)}
+      if let v = _storage._clear_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 207)}
+      if let v = _storage._data {try visitor.visitSingularInt32Field(value: v, fieldNumber: 208)}
+      if let v = _storage._delimitedData {try visitor.visitSingularInt32Field(value: v, fieldNumber: 209)}
+      if let v = _storage._descriptor {try visitor.visitSingularInt32Field(value: v, fieldNumber: 210)}
+      if let v = _storage._extensionRegistry {try visitor.visitSingularInt32Field(value: v, fieldNumber: 211)}
+      if let v = _storage._extensionsCurrentlySet {try visitor.visitSingularInt32Field(value: v, fieldNumber: 212)}
+      if let v = _storage._isInitialized_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 213)}
+      if let v = _storage._serializedSize {try visitor.visitSingularInt32Field(value: v, fieldNumber: 214)}
+      if let v = _storage._sortedExtensionsInUse {try visitor.visitSingularInt32Field(value: v, fieldNumber: 215)}
+      if let v = _storage._unknownFields_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 216)}
+      if let v = _storage._fixed {try visitor.visitSingularInt32Field(value: v, fieldNumber: 217)}
+      if let v = _storage._fract {try visitor.visitSingularInt32Field(value: v, fieldNumber: 218)}
+      if let v = _storage._size {try visitor.visitSingularInt32Field(value: v, fieldNumber: 219)}
+      if let v = _storage._logicalAddress {try visitor.visitSingularInt32Field(value: v, fieldNumber: 220)}
+      if let v = _storage._physicalAddress {try visitor.visitSingularInt32Field(value: v, fieldNumber: 221)}
+      if let v = _storage._byteCount {try visitor.visitSingularInt32Field(value: v, fieldNumber: 222)}
+      if let v = _storage._byteOffset {try visitor.visitSingularInt32Field(value: v, fieldNumber: 223)}
+      if let v = _storage._duration {try visitor.visitSingularInt32Field(value: v, fieldNumber: 224)}
+      if let v = _storage._absoluteTime {try visitor.visitSingularInt32Field(value: v, fieldNumber: 225)}
+      if let v = _storage._optionBits {try visitor.visitSingularInt32Field(value: v, fieldNumber: 226)}
+      if let v = _storage._itemCount {try visitor.visitSingularInt32Field(value: v, fieldNumber: 227)}
+      if let v = _storage._pbversion {try visitor.visitSingularInt32Field(value: v, fieldNumber: 228)}
+      if let v = _storage._scriptCode {try visitor.visitSingularInt32Field(value: v, fieldNumber: 229)}
+      if let v = _storage._langCode {try visitor.visitSingularInt32Field(value: v, fieldNumber: 230)}
+      if let v = _storage._regionCode {try visitor.visitSingularInt32Field(value: v, fieldNumber: 231)}
+      if let v = _storage._ostype {try visitor.visitSingularInt32Field(value: v, fieldNumber: 232)}
+      if let v = _storage._processSerialNumber {try visitor.visitSingularInt32Field(value: v, fieldNumber: 233)}
+      if let v = _storage._point {try visitor.visitSingularInt32Field(value: v, fieldNumber: 234)}
+      if let v = _storage._rect {try visitor.visitSingularInt32Field(value: v, fieldNumber: 235)}
+      if let v = _storage._fixedPoint {try visitor.visitSingularInt32Field(value: v, fieldNumber: 236)}
+      if let v = _storage._fixedRect {try visitor.visitSingularInt32Field(value: v, fieldNumber: 237)}
+      if let v = _storage._style {try visitor.visitSingularInt32Field(value: v, fieldNumber: 238)}
+      if let v = _storage._styleParameter {try visitor.visitSingularInt32Field(value: v, fieldNumber: 239)}
+      if let v = _storage._styleField {try visitor.visitSingularInt32Field(value: v, fieldNumber: 240)}
+      if let v = _storage._timeScale {try visitor.visitSingularInt32Field(value: v, fieldNumber: 241)}
+      if let v = _storage._timeBase {try visitor.visitSingularInt32Field(value: v, fieldNumber: 242)}
+      if let v = _storage._timeRecord {try visitor.visitSingularInt32Field(value: v, fieldNumber: 243)}
+      if let v = _storage._jsonShouldBeOverriden {try visitor.visitSingularInt32Field(value: v, fieldNumber: 244)}
+      if let v = _storage._any {try visitor.visitSingularInt32Field(value: v, fieldNumber: 245)}
+      if let v = _storage._int32 {try visitor.visitSingularInt32Field(value: v, fieldNumber: 246)}
+      if let v = _storage._int64 {try visitor.visitSingularInt32Field(value: v, fieldNumber: 247)}
+      if let v = _storage._uint32 {try visitor.visitSingularInt32Field(value: v, fieldNumber: 250)}
+      if let v = _storage._uint64 {try visitor.visitSingularInt32Field(value: v, fieldNumber: 251)}
+      if let v = _storage._associatedtype_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 252)}
+      if let v = _storage._fileprivate_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 253)}
+      if let v = _storage._open_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 254)}
+      if let v = _storage._serializedData {try visitor.visitSingularInt32Field(value: v, fieldNumber: 255)}
+      if let v = _storage._hasSerializedData_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 256)}
+      if let v = _storage._clearSerializedData_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 257)}
+      if let v = _storage._jsonUtf8Data {try visitor.visitSingularInt32Field(value: v, fieldNumber: 258)}
+      if let v = _storage._jsonString {try visitor.visitSingularInt32Field(value: v, fieldNumber: 259)}
+      if let v = _storage._extension_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 260)}
+      if let v = _storage._extensions {try visitor.visitSingularInt32Field(value: v, fieldNumber: 261)}
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -3690,9 +3246,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._string {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._string {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -3725,9 +3279,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._protocol_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._protocol_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -3760,9 +3312,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._int {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._int {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -3795,9 +3345,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._double {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._double {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -3830,9 +3378,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._float {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._float {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -3865,9 +3411,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._uint {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._uint {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -3900,9 +3444,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._hashValue_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._hashValue_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -3935,9 +3477,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._description_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._description_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -3970,9 +3510,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._debugDescription_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._debugDescription_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4005,9 +3543,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._swift {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._swift {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4040,9 +3576,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._unrecognized {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._unrecognized {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4075,9 +3609,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._class_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._class_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4110,9 +3642,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._deinit_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._deinit_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4145,9 +3675,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._enum_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._enum_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4180,9 +3708,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._extension_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._extension_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4215,9 +3741,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._func_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._func_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4250,9 +3774,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._import_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._import_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4285,9 +3807,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._init_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._init_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4320,9 +3840,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._inout_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._inout_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4355,9 +3873,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._internal_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._internal_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4390,9 +3906,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._let_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._let_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4425,9 +3939,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._operator_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._operator_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4460,9 +3972,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._private_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._private_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4495,9 +4005,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._protocol_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._protocol_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4530,9 +4038,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._public_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._public_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4565,9 +4071,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._static_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._static_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4600,9 +4104,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._struct_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._struct_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4635,9 +4137,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._subscript_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._subscript_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4670,9 +4170,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._typealias_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._typealias_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4705,9 +4203,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._var_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._var_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4740,9 +4236,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._break_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._break_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4775,9 +4269,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._case_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._case_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4810,9 +4302,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._continue_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._continue_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4845,9 +4335,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._default_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._default_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4880,9 +4368,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._defer_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._defer_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4915,9 +4401,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._do_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._do_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4950,9 +4434,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._else_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._else_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -4985,9 +4467,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._fallthrough_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._fallthrough_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5020,9 +4500,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._for_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._for_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5055,9 +4533,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._guard_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._guard_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5090,9 +4566,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._if_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._if_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5125,9 +4599,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._in_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._in_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5160,9 +4632,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._repeat_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._repeat_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5195,9 +4665,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._return_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._return_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5230,9 +4698,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._switch_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._switch_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5265,9 +4731,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._where_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._where_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5300,9 +4764,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._while_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._while_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5335,9 +4797,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._as_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._as_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5370,9 +4830,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._catch_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._catch_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5405,9 +4863,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._dynamicType_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._dynamicType_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5440,9 +4896,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._false_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._false_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5475,9 +4929,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._is_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._is_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5510,9 +4962,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._nil_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._nil_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5545,9 +4995,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._rethrows_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._rethrows_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5580,9 +5028,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._super_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._super_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5615,9 +5061,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._self_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._self_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5650,9 +5094,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._throw_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._throw_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5685,9 +5127,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._throws_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._throws_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5720,9 +5160,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._true_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._true_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5755,9 +5193,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._try_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._try_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5790,9 +5226,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self.__Column__ {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self.__Column__ {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5825,9 +5259,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self.__File__ {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self.__File__ {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5860,9 +5292,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self.__Function__ {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self.__Function__ {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5895,9 +5325,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self.__Line__ {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self.__Line__ {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5930,9 +5358,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self.____ {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self.____ {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -5965,9 +5391,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._____ {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._____ {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6000,9 +5424,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._associativity {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._associativity {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6035,9 +5457,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._convenience {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._convenience {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6070,9 +5490,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._dynamic {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._dynamic {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6105,9 +5523,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._didSet {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._didSet {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6140,9 +5556,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._final {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._final {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6175,9 +5589,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._get {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._get {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6210,9 +5622,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._infix {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._infix {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6245,9 +5655,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._indirect {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._indirect {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6280,9 +5688,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._lazy {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._lazy {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6315,9 +5721,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._left {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._left {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6350,9 +5754,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._mutating {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._mutating {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6385,9 +5787,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._none {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._none {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6420,9 +5820,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._nonmutating {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._nonmutating {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6455,9 +5853,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._optional {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._optional {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6490,9 +5886,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._override {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._override {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6525,9 +5919,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._postfix {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._postfix {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6560,9 +5952,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._precedence {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._precedence {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6595,9 +5985,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._prefix {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._prefix {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6630,9 +6018,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._required {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._required {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6665,9 +6051,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._right {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._right {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6700,9 +6084,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._set {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._set {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6735,9 +6117,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._type {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._type {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6770,9 +6150,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._unowned {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._unowned {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6805,9 +6183,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._weak {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._weak {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6840,9 +6216,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._willSet {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._willSet {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6875,9 +6249,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._id {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._id {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6910,9 +6282,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._cmd {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._cmd {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6945,9 +6315,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._out {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._out {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -6980,9 +6348,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._bycopy {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._bycopy {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7015,9 +6381,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._byref {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._byref {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7050,9 +6414,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._oneway {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._oneway {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7085,9 +6447,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._and {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._and {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7120,9 +6480,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._andEq {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._andEq {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7155,9 +6513,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._alignas {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._alignas {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7190,9 +6546,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._alignof {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._alignof {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7225,9 +6579,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._asm {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._asm {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7260,9 +6612,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._auto {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._auto {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7295,9 +6645,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._bitand {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._bitand {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7330,9 +6678,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._bitor {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._bitor {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7365,9 +6711,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._bool {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._bool {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7400,9 +6744,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._char {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._char {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7435,9 +6777,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._char16T {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._char16T {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7470,9 +6810,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._char32T {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._char32T {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7505,9 +6843,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._compl {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._compl {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7540,9 +6876,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._const {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._const {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7575,9 +6909,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._constexpr {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._constexpr {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7610,9 +6942,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._constCast {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._constCast {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7645,9 +6975,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._decltype {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._decltype {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7680,9 +7008,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._delete {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._delete {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7715,9 +7041,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._dynamicCast {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._dynamicCast {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7750,9 +7074,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._explicit {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._explicit {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7785,9 +7107,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._export {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._export {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7820,9 +7140,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._extern {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._extern {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7855,9 +7173,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._friend {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._friend {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7890,9 +7206,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._goto {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._goto {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7925,9 +7239,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._inline {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._inline {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7960,9 +7272,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._long {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._long {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -7995,9 +7305,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._mutable {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._mutable {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8030,9 +7338,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._namespace {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._namespace {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8065,9 +7371,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._new {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._new {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8100,9 +7404,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._noexcept {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._noexcept {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8135,9 +7437,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._not {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._not {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8170,9 +7470,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._notEq {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._notEq {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8205,9 +7503,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._nullptr {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._nullptr {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8240,9 +7536,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._or {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._or {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8275,9 +7569,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._orEq {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._orEq {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8310,9 +7602,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._protected {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._protected {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8345,9 +7635,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._register {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._register {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8380,9 +7668,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._reinterpretCast {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._reinterpretCast {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8415,9 +7701,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._short {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._short {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8450,9 +7734,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._signed {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._signed {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8485,9 +7767,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._sizeof {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._sizeof {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8520,9 +7800,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._staticAssert {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._staticAssert {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8555,9 +7833,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._staticCast {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._staticCast {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8590,9 +7866,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._template {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._template {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8625,9 +7899,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._this {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._this {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8660,9 +7932,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._threadLocal {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._threadLocal {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8695,9 +7965,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._typedef {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._typedef {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8730,9 +7998,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._typeid {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._typeid {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8765,9 +8031,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._typename {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._typename {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8800,9 +8064,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._union {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._union {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8835,9 +8097,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._unsigned {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._unsigned {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8870,9 +8130,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._using {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._using {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8905,9 +8163,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._virtual {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._virtual {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8940,9 +8196,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._void {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._void {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -8975,9 +8229,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._volatile {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._volatile {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9010,9 +8262,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._wcharT {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._wcharT {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9045,9 +8295,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._xor {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._xor {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9080,9 +8328,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._xorEq {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._xorEq {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9115,9 +8361,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._restrict {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._restrict {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9150,9 +8394,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._category {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._category {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9185,9 +8427,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._ivar {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._ivar {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9220,9 +8460,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._method {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._method {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9255,9 +8493,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._finalize {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._finalize {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9290,9 +8526,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._hash_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._hash_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9325,9 +8559,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._dealloc {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._dealloc {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9360,9 +8592,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._superclass {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._superclass {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9395,9 +8625,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._retain {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._retain {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9430,9 +8658,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._release {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._release {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9465,9 +8691,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._autorelease {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._autorelease {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9500,9 +8724,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._retainCount {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._retainCount {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9535,9 +8757,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._zone {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._zone {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9570,9 +8790,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._isProxy {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._isProxy {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9605,9 +8823,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._copy {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._copy {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9640,9 +8856,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._mutableCopy {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._mutableCopy {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9675,9 +8889,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._classForCoder {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._classForCoder {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9710,9 +8922,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._clear_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._clear_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9745,9 +8955,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._data {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._data {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9780,9 +8988,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._delimitedData {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._delimitedData {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9815,9 +9021,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._descriptor {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._descriptor {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9850,9 +9054,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._extensionRegistry {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._extensionRegistry {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9885,9 +9087,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._extensionsCurrentlySet {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._extensionsCurrentlySet {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9920,9 +9120,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._isInitialized_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._isInitialized_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9955,9 +9153,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._serializedSize {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._serializedSize {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -9990,9 +9186,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._sortedExtensionsInUse {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._sortedExtensionsInUse {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10025,9 +9219,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._unknownFields_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._unknownFields_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10060,9 +9252,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._fixed {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._fixed {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10095,9 +9285,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._fract {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._fract {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10130,9 +9318,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._size {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._size {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10165,9 +9351,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._logicalAddress {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._logicalAddress {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10200,9 +9384,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._physicalAddress {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._physicalAddress {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10235,9 +9417,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._byteCount {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._byteCount {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10270,9 +9450,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._byteOffset {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._byteOffset {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10305,9 +9483,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._duration {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._duration {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10340,9 +9516,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._absoluteTime {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._absoluteTime {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10375,9 +9549,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._optionBits {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._optionBits {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10410,9 +9582,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._itemCount {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._itemCount {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10445,9 +9615,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._pbversion {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._pbversion {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10480,9 +9648,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._scriptCode {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._scriptCode {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10515,9 +9681,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._langCode {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._langCode {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10550,9 +9714,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._regionCode {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._regionCode {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10585,9 +9747,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._ostype {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._ostype {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10620,9 +9780,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._processSerialNumber {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._processSerialNumber {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10655,9 +9813,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._point {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._point {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10690,9 +9846,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._rect {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._rect {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10725,9 +9879,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._fixedPoint {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._fixedPoint {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10760,9 +9912,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._fixedRect {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._fixedRect {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10795,9 +9945,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._style {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._style {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10830,9 +9978,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._styleParameter {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._styleParameter {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10865,9 +10011,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._styleField {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._styleField {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10900,9 +10044,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._timeScale {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._timeScale {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10935,9 +10077,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._timeBase {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._timeBase {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -10970,9 +10110,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._timeRecord {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._timeRecord {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -11005,9 +10143,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._serializedData {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._serializedData {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -11040,9 +10176,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._jsonUtf8Data {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._jsonUtf8Data {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -11075,9 +10209,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._jsonString {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._jsonString {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -11110,9 +10242,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._extension_p {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._extension_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -11145,9 +10275,7 @@ struct SwiftUnittest_Names_MessageNames: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._extensions {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._extensions {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -16187,45 +15315,19 @@ struct SwiftUnittest_Names_FieldNamingInitials: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._http {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
-      if let v = self._httpRequest {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 2)
-      }
-      if let v = self._theHTTPRequest {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 3)
-      }
-      if let v = self._theHTTP {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 4)
-      }
-      if let v = self._https {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 11)
-      }
-      if let v = self._httpsRequest {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 12)
-      }
-      if let v = self._theHTTPSRequest {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 13)
-      }
-      if let v = self._theHTTPS {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 14)
-      }
-      if let v = self._url {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 21)
-      }
-      if let v = self._urlValue {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 22)
-      }
-      if let v = self._theURLValue {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 23)
-      }
-      if let v = self._theURL {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 24)
-      }
-      if let v = self._aBC {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 31)
-      }
+      if let v = self._http {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
+      if let v = self._httpRequest {try visitor.visitSingularInt32Field(value: v, fieldNumber: 2)}
+      if let v = self._theHTTPRequest {try visitor.visitSingularInt32Field(value: v, fieldNumber: 3)}
+      if let v = self._theHTTP {try visitor.visitSingularInt32Field(value: v, fieldNumber: 4)}
+      if let v = self._https {try visitor.visitSingularInt32Field(value: v, fieldNumber: 11)}
+      if let v = self._httpsRequest {try visitor.visitSingularInt32Field(value: v, fieldNumber: 12)}
+      if let v = self._theHTTPSRequest {try visitor.visitSingularInt32Field(value: v, fieldNumber: 13)}
+      if let v = self._theHTTPS {try visitor.visitSingularInt32Field(value: v, fieldNumber: 14)}
+      if let v = self._url {try visitor.visitSingularInt32Field(value: v, fieldNumber: 21)}
+      if let v = self._urlValue {try visitor.visitSingularInt32Field(value: v, fieldNumber: 22)}
+      if let v = self._theURLValue {try visitor.visitSingularInt32Field(value: v, fieldNumber: 23)}
+      if let v = self._theURL {try visitor.visitSingularInt32Field(value: v, fieldNumber: 24)}
+      if let v = self._aBC {try visitor.visitSingularInt32Field(value: v, fieldNumber: 31)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -16380,42 +15482,18 @@ struct SwiftUnittest_Names_FieldNamingInitials: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._http {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
-      if let v = self._httpRequest {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 2)
-      }
-      if let v = self._theHTTPRequest {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 3)
-      }
-      if let v = self._theHTTP {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 4)
-      }
-      if let v = self._https {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 11)
-      }
-      if let v = self._httpsRequest {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 12)
-      }
-      if let v = self._theHTTPSRequest {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 13)
-      }
-      if let v = self._theHTTPS {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 14)
-      }
-      if let v = self._url {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 21)
-      }
-      if let v = self._urlValue {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 22)
-      }
-      if let v = self._theURLValue {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 23)
-      }
-      if let v = self._theURL {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 24)
-      }
+      if let v = self._http {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
+      if let v = self._httpRequest {try visitor.visitSingularInt32Field(value: v, fieldNumber: 2)}
+      if let v = self._theHTTPRequest {try visitor.visitSingularInt32Field(value: v, fieldNumber: 3)}
+      if let v = self._theHTTP {try visitor.visitSingularInt32Field(value: v, fieldNumber: 4)}
+      if let v = self._https {try visitor.visitSingularInt32Field(value: v, fieldNumber: 11)}
+      if let v = self._httpsRequest {try visitor.visitSingularInt32Field(value: v, fieldNumber: 12)}
+      if let v = self._theHTTPSRequest {try visitor.visitSingularInt32Field(value: v, fieldNumber: 13)}
+      if let v = self._theHTTPS {try visitor.visitSingularInt32Field(value: v, fieldNumber: 14)}
+      if let v = self._url {try visitor.visitSingularInt32Field(value: v, fieldNumber: 21)}
+      if let v = self._urlValue {try visitor.visitSingularInt32Field(value: v, fieldNumber: 22)}
+      if let v = self._theURLValue {try visitor.visitSingularInt32Field(value: v, fieldNumber: 23)}
+      if let v = self._theURL {try visitor.visitSingularInt32Field(value: v, fieldNumber: 24)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -16569,42 +15647,18 @@ struct SwiftUnittest_Names_FieldNamingInitials: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._http {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
-      if let v = self._httpRequest {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 2)
-      }
-      if let v = self._theHTTPRequest {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 3)
-      }
-      if let v = self._theHTTP {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 4)
-      }
-      if let v = self._https {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 11)
-      }
-      if let v = self._httpsRequest {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 12)
-      }
-      if let v = self._theHTTPSRequest {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 13)
-      }
-      if let v = self._theHTTPS {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 14)
-      }
-      if let v = self._url {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 21)
-      }
-      if let v = self._urlValue {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 22)
-      }
-      if let v = self._theURLValue {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 23)
-      }
-      if let v = self._theURL {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 24)
-      }
+      if let v = self._http {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
+      if let v = self._httpRequest {try visitor.visitSingularInt32Field(value: v, fieldNumber: 2)}
+      if let v = self._theHTTPRequest {try visitor.visitSingularInt32Field(value: v, fieldNumber: 3)}
+      if let v = self._theHTTP {try visitor.visitSingularInt32Field(value: v, fieldNumber: 4)}
+      if let v = self._https {try visitor.visitSingularInt32Field(value: v, fieldNumber: 11)}
+      if let v = self._httpsRequest {try visitor.visitSingularInt32Field(value: v, fieldNumber: 12)}
+      if let v = self._theHTTPSRequest {try visitor.visitSingularInt32Field(value: v, fieldNumber: 13)}
+      if let v = self._theHTTPS {try visitor.visitSingularInt32Field(value: v, fieldNumber: 14)}
+      if let v = self._url {try visitor.visitSingularInt32Field(value: v, fieldNumber: 21)}
+      if let v = self._urlValue {try visitor.visitSingularInt32Field(value: v, fieldNumber: 22)}
+      if let v = self._theURLValue {try visitor.visitSingularInt32Field(value: v, fieldNumber: 23)}
+      if let v = self._theURL {try visitor.visitSingularInt32Field(value: v, fieldNumber: 24)}
       try unknownFields.traverse(visitor: &visitor)
     }
 

@@ -94,9 +94,7 @@ struct ProtobufUnittest_TestAny: SwiftProtobuf.Message {
       if _storage._int32Value != 0 {
         try visitor.visitSingularInt32Field(value: _storage._int32Value, fieldNumber: 1)
       }
-      if let v = _storage._anyValue {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-      }
+      if let v = _storage._anyValue {try visitor.visitSingularMessageField(value: v, fieldNumber: 2)}
       if !_storage._repeatedAnyValue.isEmpty {
         try visitor.visitRepeatedMessageField(value: _storage._repeatedAnyValue, fieldNumber: 3)
       }

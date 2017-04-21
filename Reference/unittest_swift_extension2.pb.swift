@@ -68,9 +68,7 @@ struct ProtobufUnittest_Extend2_MyMessage: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._c {
-        try visitor.visitSingularInt64Field(value: v, fieldNumber: 1210)
-      }
+      if let v = self._c {try visitor.visitSingularInt64Field(value: v, fieldNumber: 1210)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
@@ -115,9 +113,7 @@ struct ProtobufUnittest_Extend2_C: SwiftProtobuf.Message {
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._c {
-      try visitor.visitSingularInt64Field(value: v, fieldNumber: 1220)
-    }
+    if let v = self._c {try visitor.visitSingularInt64Field(value: v, fieldNumber: 1220)}
     try unknownFields.traverse(visitor: &visitor)
   }
 

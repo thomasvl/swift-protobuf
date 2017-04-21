@@ -83,9 +83,7 @@ struct SwiftTestGroupExtensions: SwiftProtobuf.Message, SwiftProtobuf.Extensible
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._a {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-    }
+    if let v = self._a {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
     try visitor.visitExtensionFields(fields: _protobuf_extensionFieldValues, start: 2, end: 11)
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -120,9 +118,7 @@ struct ExtensionGroup: SwiftProtobuf.Message {
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._a {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-    }
+    if let v = self._a {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -155,9 +151,7 @@ struct RepeatedExtensionGroup: SwiftProtobuf.Message {
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._a {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-    }
+    if let v = self._a {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -190,9 +184,7 @@ struct SwiftTestGroupUnextended: SwiftProtobuf.Message {
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._a {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-    }
+    if let v = self._a {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -276,9 +268,7 @@ struct SwiftTestNestingGroupsMessage: SwiftProtobuf.Message {
       }
 
       func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-        if let v = self._sub2A {
-          try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-        }
+        if let v = self._sub2A {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
         try unknownFields.traverse(visitor: &visitor)
       }
 
@@ -302,12 +292,8 @@ struct SwiftTestNestingGroupsMessage: SwiftProtobuf.Message {
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
       try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-        if let v = _storage._sub1A {
-          try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-        }
-        if let v = _storage._subGroup2 {
-          try visitor.visitSingularGroupField(value: v, fieldNumber: 2)
-        }
+        if let v = _storage._sub1A {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
+        if let v = _storage._subGroup2 {try visitor.visitSingularGroupField(value: v, fieldNumber: 2)}
       }
       try unknownFields.traverse(visitor: &visitor)
     }
@@ -357,9 +343,7 @@ struct SwiftTestNestingGroupsMessage: SwiftProtobuf.Message {
       }
 
       func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-        if let v = self._sub4A {
-          try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-        }
+        if let v = self._sub4A {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
         try unknownFields.traverse(visitor: &visitor)
       }
 
@@ -379,9 +363,7 @@ struct SwiftTestNestingGroupsMessage: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._sub3A {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = self._sub3A {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       if !self.subGroup4.isEmpty {
         try visitor.visitRepeatedGroupField(value: self.subGroup4, fieldNumber: 2)
       }
@@ -409,12 +391,8 @@ struct SwiftTestNestingGroupsMessage: SwiftProtobuf.Message {
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      if let v = _storage._outerA {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
-      if let v = _storage._subGroup1 {
-        try visitor.visitSingularGroupField(value: v, fieldNumber: 2)
-      }
+      if let v = _storage._outerA {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
+      if let v = _storage._subGroup1 {try visitor.visitSingularGroupField(value: v, fieldNumber: 2)}
       if !_storage._subGroup3.isEmpty {
         try visitor.visitRepeatedGroupField(value: _storage._subGroup3, fieldNumber: 3)
       }

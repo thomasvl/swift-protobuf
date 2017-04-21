@@ -141,13 +141,9 @@ struct ProtobufUnittest_TestOptimizedForSize: SwiftProtobuf.Message, SwiftProtob
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      if let v = _storage._i {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-      }
+      if let v = _storage._i {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
       try _storage._foo?.traverse(visitor: &visitor)
-      if let v = _storage._msg {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 19)
-      }
+      if let v = _storage._msg {try visitor.visitSingularMessageField(value: v, fieldNumber: 19)}
       try visitor.visitExtensionFields(fields: _protobuf_extensionFieldValues, start: 1000, end: 536870912)
     }
     try unknownFields.traverse(visitor: &visitor)
@@ -188,9 +184,7 @@ struct ProtobufUnittest_TestRequiredOptimizedForSize: SwiftProtobuf.Message {
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._x {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-    }
+    if let v = self._x {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -234,9 +228,7 @@ struct ProtobufUnittest_TestOptionalOptimizedForSize: SwiftProtobuf.Message {
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      if let v = _storage._o {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-      }
+      if let v = _storage._o {try visitor.visitSingularMessageField(value: v, fieldNumber: 1)}
     }
     try unknownFields.traverse(visitor: &visitor)
   }

@@ -905,9 +905,7 @@ struct ProtobufTestMessages_Proto3_TestAllTypes: SwiftProtobuf.Message {
         if _storage._a != 0 {
           try visitor.visitSingularInt32Field(value: _storage._a, fieldNumber: 1)
         }
-        if let v = _storage._corecursive {
-          try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-        }
+        if let v = _storage._corecursive {try visitor.visitSingularMessageField(value: v, fieldNumber: 2)}
       }
       try unknownFields.traverse(visitor: &visitor)
     }
@@ -1090,12 +1088,8 @@ struct ProtobufTestMessages_Proto3_TestAllTypes: SwiftProtobuf.Message {
       if !_storage._optionalBytes.isEmpty {
         try visitor.visitSingularBytesField(value: _storage._optionalBytes, fieldNumber: 15)
       }
-      if let v = _storage._optionalNestedMessage {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 18)
-      }
-      if let v = _storage._optionalForeignMessage {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 19)
-      }
+      if let v = _storage._optionalNestedMessage {try visitor.visitSingularMessageField(value: v, fieldNumber: 18)}
+      if let v = _storage._optionalForeignMessage {try visitor.visitSingularMessageField(value: v, fieldNumber: 19)}
       if _storage._optionalNestedEnum != ProtobufTestMessages_Proto3_TestAllTypes.NestedEnum.foo {
         try visitor.visitSingularEnumField(value: _storage._optionalNestedEnum, fieldNumber: 21)
       }
@@ -1108,9 +1102,7 @@ struct ProtobufTestMessages_Proto3_TestAllTypes: SwiftProtobuf.Message {
       if !_storage._optionalCord.isEmpty {
         try visitor.visitSingularStringField(value: _storage._optionalCord, fieldNumber: 25)
       }
-      if let v = _storage._recursiveMessage {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 27)
-      }
+      if let v = _storage._recursiveMessage {try visitor.visitSingularMessageField(value: v, fieldNumber: 27)}
       if !_storage._repeatedInt32.isEmpty {
         try visitor.visitPackedInt32Field(value: _storage._repeatedInt32, fieldNumber: 31)
       }
@@ -1232,33 +1224,15 @@ struct ProtobufTestMessages_Proto3_TestAllTypes: SwiftProtobuf.Message {
         try visitor.visitMapField(fieldType: SwiftProtobuf._ProtobufEnumMap<SwiftProtobuf.ProtobufString,ProtobufTestMessages_Proto3_ForeignEnum>.self, value: _storage._mapStringForeignEnum, fieldNumber: 74)
       }
       try _storage._oneofField?.traverse(visitor: &visitor)
-      if let v = _storage._optionalBoolWrapper {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 201)
-      }
-      if let v = _storage._optionalInt32Wrapper {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 202)
-      }
-      if let v = _storage._optionalInt64Wrapper {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 203)
-      }
-      if let v = _storage._optionalUint32Wrapper {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 204)
-      }
-      if let v = _storage._optionalUint64Wrapper {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 205)
-      }
-      if let v = _storage._optionalFloatWrapper {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 206)
-      }
-      if let v = _storage._optionalDoubleWrapper {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 207)
-      }
-      if let v = _storage._optionalStringWrapper {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 208)
-      }
-      if let v = _storage._optionalBytesWrapper {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 209)
-      }
+      if let v = _storage._optionalBoolWrapper {try visitor.visitSingularMessageField(value: v, fieldNumber: 201)}
+      if let v = _storage._optionalInt32Wrapper {try visitor.visitSingularMessageField(value: v, fieldNumber: 202)}
+      if let v = _storage._optionalInt64Wrapper {try visitor.visitSingularMessageField(value: v, fieldNumber: 203)}
+      if let v = _storage._optionalUint32Wrapper {try visitor.visitSingularMessageField(value: v, fieldNumber: 204)}
+      if let v = _storage._optionalUint64Wrapper {try visitor.visitSingularMessageField(value: v, fieldNumber: 205)}
+      if let v = _storage._optionalFloatWrapper {try visitor.visitSingularMessageField(value: v, fieldNumber: 206)}
+      if let v = _storage._optionalDoubleWrapper {try visitor.visitSingularMessageField(value: v, fieldNumber: 207)}
+      if let v = _storage._optionalStringWrapper {try visitor.visitSingularMessageField(value: v, fieldNumber: 208)}
+      if let v = _storage._optionalBytesWrapper {try visitor.visitSingularMessageField(value: v, fieldNumber: 209)}
       if !_storage._repeatedBoolWrapper.isEmpty {
         try visitor.visitRepeatedMessageField(value: _storage._repeatedBoolWrapper, fieldNumber: 211)
       }
@@ -1286,24 +1260,12 @@ struct ProtobufTestMessages_Proto3_TestAllTypes: SwiftProtobuf.Message {
       if !_storage._repeatedBytesWrapper.isEmpty {
         try visitor.visitRepeatedMessageField(value: _storage._repeatedBytesWrapper, fieldNumber: 219)
       }
-      if let v = _storage._optionalDuration {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 301)
-      }
-      if let v = _storage._optionalTimestamp {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 302)
-      }
-      if let v = _storage._optionalFieldMask {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 303)
-      }
-      if let v = _storage._optionalStruct {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 304)
-      }
-      if let v = _storage._optionalAny {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 305)
-      }
-      if let v = _storage._optionalValue {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 306)
-      }
+      if let v = _storage._optionalDuration {try visitor.visitSingularMessageField(value: v, fieldNumber: 301)}
+      if let v = _storage._optionalTimestamp {try visitor.visitSingularMessageField(value: v, fieldNumber: 302)}
+      if let v = _storage._optionalFieldMask {try visitor.visitSingularMessageField(value: v, fieldNumber: 303)}
+      if let v = _storage._optionalStruct {try visitor.visitSingularMessageField(value: v, fieldNumber: 304)}
+      if let v = _storage._optionalAny {try visitor.visitSingularMessageField(value: v, fieldNumber: 305)}
+      if let v = _storage._optionalValue {try visitor.visitSingularMessageField(value: v, fieldNumber: 306)}
       if !_storage._repeatedDuration.isEmpty {
         try visitor.visitRepeatedMessageField(value: _storage._repeatedDuration, fieldNumber: 311)
       }

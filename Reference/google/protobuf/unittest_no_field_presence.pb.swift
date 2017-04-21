@@ -564,15 +564,9 @@ struct Proto2NofieldpresenceUnittest_TestAllTypes: SwiftProtobuf.Message {
       if !_storage._optionalBytes.isEmpty {
         try visitor.visitSingularBytesField(value: _storage._optionalBytes, fieldNumber: 15)
       }
-      if let v = _storage._optionalNestedMessage {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 18)
-      }
-      if let v = _storage._optionalForeignMessage {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 19)
-      }
-      if let v = _storage._optionalProto2Message {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 20)
-      }
+      if let v = _storage._optionalNestedMessage {try visitor.visitSingularMessageField(value: v, fieldNumber: 18)}
+      if let v = _storage._optionalForeignMessage {try visitor.visitSingularMessageField(value: v, fieldNumber: 19)}
+      if let v = _storage._optionalProto2Message {try visitor.visitSingularMessageField(value: v, fieldNumber: 20)}
       if _storage._optionalNestedEnum != Proto2NofieldpresenceUnittest_TestAllTypes.NestedEnum.foo {
         try visitor.visitSingularEnumField(value: _storage._optionalNestedEnum, fieldNumber: 21)
       }
@@ -585,9 +579,7 @@ struct Proto2NofieldpresenceUnittest_TestAllTypes: SwiftProtobuf.Message {
       if !_storage._optionalCord.isEmpty {
         try visitor.visitSingularStringField(value: _storage._optionalCord, fieldNumber: 25)
       }
-      if let v = _storage._optionalLazyMessage {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 30)
-      }
+      if let v = _storage._optionalLazyMessage {try visitor.visitSingularMessageField(value: v, fieldNumber: 30)}
       if !_storage._repeatedInt32.isEmpty {
         try visitor.visitPackedInt32Field(value: _storage._repeatedInt32, fieldNumber: 31)
       }
@@ -702,9 +694,7 @@ struct Proto2NofieldpresenceUnittest_TestProto2Required: SwiftProtobuf.Message {
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      if let v = _storage._proto2 {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-      }
+      if let v = _storage._proto2 {try visitor.visitSingularMessageField(value: v, fieldNumber: 1)}
     }
     try unknownFields.traverse(visitor: &visitor)
   }

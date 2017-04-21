@@ -692,15 +692,9 @@ struct ProtobufUnittest_TestRequiredLite: SwiftProtobuf.Message {
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._a {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-    }
-    if let v = self._b {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 2)
-    }
-    if let v = self._c {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 3)
-    }
+    if let v = self._a {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
+    if let v = self._b {try visitor.visitSingularInt32Field(value: v, fieldNumber: 2)}
+    if let v = self._c {try visitor.visitSingularInt32Field(value: v, fieldNumber: 3)}
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -735,9 +729,7 @@ struct ProtobufUnittest_ForeignMessageArenaLite: SwiftProtobuf.Message {
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._c {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
-    }
+    if let v = self._c {try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)}
     try unknownFields.traverse(visitor: &visitor)
   }
 

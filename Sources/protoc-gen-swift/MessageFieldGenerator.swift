@@ -537,6 +537,7 @@ struct MessageFieldGenerator {
     }
 
     func generateTraverse(printer p: inout CodePrinter, usesStorage: Bool) {
+        assert(oneof == nil)
         let prefix: String
         if usesStorage {
             prefix = "_storage._"
@@ -576,12 +577,15 @@ struct MessageFieldGenerator {
 
         let varName: String
         let conditional: String
+        let asOneLine: Bool
         if isRepeated {
             varName = prefix + swiftName
             conditional = "!\(varName).isEmpty"
+            asOneLine = false
         } else if isGroup || isMessage || !isProto3 {
             varName = "v"
             conditional = "let v = \(prefix)\(swiftName)"
+            asOneLine = true
         } else {
             assert(isProto3)
             varName = prefix + swiftName
@@ -590,12 +594,17 @@ struct MessageFieldGenerator {
             } else {
                 conditional = ("\(varName) != \(swiftDefaultValue)")
             }
+            asOneLine = false
         }
 
-        p.print("if \(conditional) {\n")
-        p.indent()
-        p.print("try visitor.\(visitMethod)(\(fieldTypeArg)value: \(varName), fieldNumber: \(number))\n")
-        p.outdent()
-        p.print("}\n")
+        if asOneLine {
+            p.print("if \(conditional) {try visitor.\(visitMethod)(\(fieldTypeArg)value: \(varName), fieldNumber: \(number))}\n")
+        } else {
+            p.print("if \(conditional) {\n")
+            p.indent()
+            p.print("try visitor.\(visitMethod)(\(fieldTypeArg)value: \(varName), fieldNumber: \(number))\n")
+            p.outdent()
+            p.print("}\n")
+        }
     }
 }

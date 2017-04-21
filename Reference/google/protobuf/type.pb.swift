@@ -160,9 +160,7 @@ struct Google_Protobuf_Type: SwiftProtobuf.Message {
       if !_storage._options.isEmpty {
         try visitor.visitRepeatedMessageField(value: _storage._options, fieldNumber: 4)
       }
-      if let v = _storage._sourceContext {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
-      }
+      if let v = _storage._sourceContext {try visitor.visitSingularMessageField(value: v, fieldNumber: 5)}
       if _storage._syntax != Google_Protobuf_Syntax.proto2 {
         try visitor.visitSingularEnumField(value: _storage._syntax, fieldNumber: 6)
       }
@@ -496,9 +494,7 @@ struct Google_Protobuf_Enum: SwiftProtobuf.Message {
       if !_storage._options.isEmpty {
         try visitor.visitRepeatedMessageField(value: _storage._options, fieldNumber: 3)
       }
-      if let v = _storage._sourceContext {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
-      }
+      if let v = _storage._sourceContext {try visitor.visitSingularMessageField(value: v, fieldNumber: 4)}
       if _storage._syntax != Google_Protobuf_Syntax.proto2 {
         try visitor.visitSingularEnumField(value: _storage._syntax, fieldNumber: 5)
       }
@@ -600,9 +596,7 @@ struct Google_Protobuf_Option: SwiftProtobuf.Message {
       if !_storage._name.isEmpty {
         try visitor.visitSingularStringField(value: _storage._name, fieldNumber: 1)
       }
-      if let v = _storage._value {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-      }
+      if let v = _storage._value {try visitor.visitSingularMessageField(value: v, fieldNumber: 2)}
     }
     try unknownFields.traverse(visitor: &visitor)
   }

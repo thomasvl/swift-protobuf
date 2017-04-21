@@ -273,30 +273,14 @@ struct ProtobufUnittest_SwiftReservedTest: SwiftProtobuf.Message {
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._protoMessageName {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 10)
-    }
-    if let v = self._protoPackageName {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 11)
-    }
-    if let v = self._anyTypePrefix {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 12)
-    }
-    if let v = self._anyTypeURL {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 13)
-    }
-    if let v = self._isInitialized_p {
-      try visitor.visitSingularStringField(value: v, fieldNumber: 20)
-    }
-    if let v = self._hashValue_p {
-      try visitor.visitSingularStringField(value: v, fieldNumber: 21)
-    }
-    if let v = self._debugDescription_p {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 22)
-    }
-    if let v = self._requiredInt {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 30)
-    }
+    if let v = self._protoMessageName {try visitor.visitSingularInt32Field(value: v, fieldNumber: 10)}
+    if let v = self._protoPackageName {try visitor.visitSingularInt32Field(value: v, fieldNumber: 11)}
+    if let v = self._anyTypePrefix {try visitor.visitSingularInt32Field(value: v, fieldNumber: 12)}
+    if let v = self._anyTypeURL {try visitor.visitSingularInt32Field(value: v, fieldNumber: 13)}
+    if let v = self._isInitialized_p {try visitor.visitSingularStringField(value: v, fieldNumber: 20)}
+    if let v = self._hashValue_p {try visitor.visitSingularStringField(value: v, fieldNumber: 21)}
+    if let v = self._debugDescription_p {try visitor.visitSingularInt32Field(value: v, fieldNumber: 22)}
+    if let v = self._requiredInt {try visitor.visitSingularInt32Field(value: v, fieldNumber: 30)}
     try unknownFields.traverse(visitor: &visitor)
   }
 

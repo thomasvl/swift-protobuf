@@ -105,12 +105,8 @@ struct ProtobufUnittest_Extend_EnumOptionalDefault: SwiftProtobuf.Message {
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
       try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-        if let v = _storage._message {
-          try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-        }
-        if let v = _storage._optionalEnum {
-          try visitor.visitSingularEnumField(value: v, fieldNumber: 17)
-        }
+        if let v = _storage._message {try visitor.visitSingularMessageField(value: v, fieldNumber: 1)}
+        if let v = _storage._optionalEnum {try visitor.visitSingularEnumField(value: v, fieldNumber: 17)}
       }
       try unknownFields.traverse(visitor: &visitor)
     }
@@ -167,9 +163,7 @@ struct ProtobufUnittest_Extend_EnumOptionalDefault: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._optionalEnum {
-        try visitor.visitSingularEnumField(value: v, fieldNumber: 17)
-      }
+      if let v = self._optionalEnum {try visitor.visitSingularEnumField(value: v, fieldNumber: 17)}
       try unknownFields.traverse(visitor: &visitor)
     }
 

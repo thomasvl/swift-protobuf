@@ -93,9 +93,7 @@ struct ProtobufUnittest_TestMessageSetContainer: SwiftProtobuf.Message {
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      if let v = _storage._messageSet {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-      }
+      if let v = _storage._messageSet {try visitor.visitSingularMessageField(value: v, fieldNumber: 1)}
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -129,9 +127,7 @@ struct ProtobufUnittest_TestMessageSetExtension1: SwiftProtobuf.Message {
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._i {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 15)
-    }
+    if let v = self._i {try visitor.visitSingularInt32Field(value: v, fieldNumber: 15)}
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -164,9 +160,7 @@ struct ProtobufUnittest_TestMessageSetExtension2: SwiftProtobuf.Message {
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if let v = self._str {
-      try visitor.visitSingularStringField(value: v, fieldNumber: 25)
-    }
+    if let v = self._str {try visitor.visitSingularStringField(value: v, fieldNumber: 25)}
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -223,12 +217,8 @@ struct ProtobufUnittest_RawMessageSet: SwiftProtobuf.Message {
     }
 
     func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-      if let v = self._typeId {
-        try visitor.visitSingularInt32Field(value: v, fieldNumber: 2)
-      }
-      if let v = self._message {
-        try visitor.visitSingularBytesField(value: v, fieldNumber: 3)
-      }
+      if let v = self._typeId {try visitor.visitSingularInt32Field(value: v, fieldNumber: 2)}
+      if let v = self._message {try visitor.visitSingularBytesField(value: v, fieldNumber: 3)}
       try unknownFields.traverse(visitor: &visitor)
     }
 
