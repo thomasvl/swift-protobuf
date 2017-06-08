@@ -34,7 +34,7 @@ public protocol AnyExtensionField: CustomDebugStringConvertible {
   mutating func decodeExtensionField<T: Decoder>(decoder: inout T) throws
 
   /// Fields know their own type, so can dispatch to a visitor
-  func traverse<V: Visitor>(visitor: inout V) throws
+  func traverse<V: Visitor>(visitor: inout V, fieldNumber: Int) throws
 
   /// Check if the field is initialized.
   var isInitialized: Bool { get }
@@ -108,8 +108,8 @@ public struct OptionalExtensionField<T: FieldType>: ExtensionField {
     }
   }
 
-  public func traverse<V: Visitor>(visitor: inout V) throws {
-    try T.visitSingular(value: value, fieldNumber: protobufExtension.fieldNumber, with: &visitor)
+  public func traverse<V: Visitor>(visitor: inout V, fieldNumber: Int) throws {
+    try T.visitSingular(value: value, fieldNumber: fieldNumber, with: &visitor)
   }
 }
 
@@ -161,9 +161,9 @@ public struct RepeatedExtensionField<T: FieldType>: ExtensionField {
     self.init(protobufExtension: protobufExtension, value: v)
   }
 
-  public func traverse<V: Visitor>(visitor: inout V) throws {
+  public func traverse<V: Visitor>(visitor: inout V, fieldNumber: Int) throws {
     if value.count > 0 {
-      try T.visitRepeated(value: value, fieldNumber: protobufExtension.fieldNumber, with: &visitor)
+      try T.visitRepeated(value: value, fieldNumber: fieldNumber, with: &visitor)
     }
   }
 }
@@ -219,9 +219,9 @@ public struct PackedExtensionField<T: FieldType>: ExtensionField {
     self.init(protobufExtension: protobufExtension, value: v)
   }
 
-  public func traverse<V: Visitor>(visitor: inout V) throws {
+  public func traverse<V: Visitor>(visitor: inout V, fieldNumber: Int) throws {
     if value.count > 0 {
-      try T.visitPacked(value: value, fieldNumber: protobufExtension.fieldNumber, with: &visitor)
+      try T.visitPacked(value: value, fieldNumber: fieldNumber, with: &visitor)
     }
   }
 }
@@ -278,10 +278,8 @@ public struct OptionalEnumExtensionField<E: Enum>: ExtensionField where E.RawVal
     }
   }
 
-  public func traverse<V: Visitor>(visitor: inout V) throws {
-    try visitor.visitSingularEnumField(
-      value: value,
-      fieldNumber: protobufExtension.fieldNumber)
+  public func traverse<V: Visitor>(visitor: inout V, fieldNumber: Int) throws {
+    try visitor.visitSingularEnumField(value: value, fieldNumber: fieldNumber)
   }
 }
 
@@ -333,11 +331,9 @@ public struct RepeatedEnumExtensionField<E: Enum>: ExtensionField where E.RawVal
     self.init(protobufExtension: protobufExtension, value: v)
   }
 
-  public func traverse<V: Visitor>(visitor: inout V) throws {
+  public func traverse<V: Visitor>(visitor: inout V, fieldNumber: Int) throws {
     if value.count > 0 {
-      try visitor.visitRepeatedEnumField(
-        value: value,
-        fieldNumber: protobufExtension.fieldNumber)
+      try visitor.visitRepeatedEnumField(value: value, fieldNumber: fieldNumber)
     }
   }
 }
@@ -393,11 +389,9 @@ public struct PackedEnumExtensionField<E: Enum>: ExtensionField where E.RawValue
     self.init(protobufExtension: protobufExtension, value: v)
   }
 
-  public func traverse<V: Visitor>(visitor: inout V) throws {
+  public func traverse<V: Visitor>(visitor: inout V, fieldNumber: Int) throws {
     if value.count > 0 {
-      try visitor.visitPackedEnumField(
-        value: value,
-        fieldNumber: protobufExtension.fieldNumber)
+      try visitor.visitPackedEnumField(value: value, fieldNumber: fieldNumber)
     }
   }
 }
@@ -453,9 +447,8 @@ public struct OptionalMessageExtensionField<M: Message & Equatable>:
     }
   }
 
-  public func traverse<V: Visitor>(visitor: inout V) throws {
-    try visitor.visitSingularMessageField(
-      value: value, fieldNumber: protobufExtension.fieldNumber)
+  public func traverse<V: Visitor>(visitor: inout V, fieldNumber: Int) throws {
+    try visitor.visitSingularMessageField(value: value, fieldNumber: fieldNumber)
   }
 
   public var isInitialized: Bool {
@@ -509,10 +502,9 @@ public struct RepeatedMessageExtensionField<M: Message & Equatable>:
     self.init(protobufExtension: protobufExtension, value: v)
   }
 
-  public func traverse<V: Visitor>(visitor: inout V) throws {
+  public func traverse<V: Visitor>(visitor: inout V, fieldNumber: Int) throws {
     if value.count > 0 {
-      try visitor.visitRepeatedMessageField(
-        value: value, fieldNumber: protobufExtension.fieldNumber)
+      try visitor.visitRepeatedMessageField(value: value, fieldNumber: fieldNumber)
     }
   }
 
@@ -571,9 +563,8 @@ public struct OptionalGroupExtensionField<G: Message & Hashable>:
     }
   }
 
-  public func traverse<V: Visitor>(visitor: inout V) throws {
-    try visitor.visitSingularGroupField(
-      value: value, fieldNumber: protobufExtension.fieldNumber)
+  public func traverse<V: Visitor>(visitor: inout V, fieldNumber: Int) throws {
+    try visitor.visitSingularGroupField(value: value, fieldNumber: fieldNumber)
   }
 
   public var isInitialized: Bool {
@@ -627,10 +618,9 @@ public struct RepeatedGroupExtensionField<G: Message & Hashable>:
     self.init(protobufExtension: protobufExtension, value: v)
   }
 
-  public func traverse<V: Visitor>(visitor: inout V) throws {
+  public func traverse<V: Visitor>(visitor: inout V, fieldNumber: Int) throws {
     if value.count > 0 {
-      try visitor.visitRepeatedGroupField(
-        value: value, fieldNumber: protobufExtension.fieldNumber)
+      try visitor.visitRepeatedGroupField(value: value, fieldNumber: fieldNumber)
     }
   }
 

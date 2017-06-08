@@ -52,7 +52,7 @@ public struct ExtensionFieldValueSet: Equatable {
     let validIndexes = values.keys.filter {$0 >= start && $0 < end}
     for i in validIndexes.sorted() {
       let value = values[i]!
-      try value.traverse(visitor: &visitor)
+      try value.traverse(visitor: &visitor, fieldNumber: i)
     }
   }
 
