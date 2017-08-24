@@ -23,6 +23,50 @@ import Foundation
 import SwiftProtobuf
 import PluginLibrary
 
+#if os(Linux)
+  import Glibc
+#else
+  import Darwin.C
+#endif
+
+private func printToFd(_ s: String, fd: Int32 = 2, appendNewLine: Bool = true) {
+  // Write UTF-8 bytes
+  let bytes: [UInt8] = [UInt8](s.utf8)
+  bytes.withUnsafeBufferPointer { (bp: UnsafeBufferPointer<UInt8>) -> () in
+    write(fd, bp.baseAddress, bp.count)
+  }
+  if appendNewLine {
+    // Write trailing newline
+    [UInt8(10)].withUnsafeBufferPointer { (bp: UnsafeBufferPointer<UInt8>) -> () in
+      write(fd, bp.baseAddress, bp.count)
+    }
+  }
+}
+
+public struct BlahBlah {
+  private var start: DispatchTime
+  private let prefix: String
+  public init(_ s: String? = nil) {
+    start = DispatchTime.now()
+    if let s = s {
+      prefix = s + ": "
+    } else {
+      prefix = ""
+    }
+  }
+  public func log(_ s: String) {
+    let end = DispatchTime.now()
+    let elapsed = end.uptimeNanoseconds - start.uptimeNanoseconds
+    let interval = Double(elapsed) / 1_000_000_000
+
+    printToFd("\(prefix)\(interval)s: \(s)")
+  }
+  public mutating func restart(_ s: String) {
+    log(s)
+    start = DispatchTime.now()
+  }
+}
+
 extension Google_Protobuf_Compiler_Version {
   fileprivate var versionString: String {
     if !suffix.isEmpty {
@@ -135,10 +179,12 @@ struct GeneratorPlugin {
   }
 
   private func generateFromStdin() -> Int32 {
+    var t = BlahBlah("ReadStdin")
     guard let requestData = Stdin.readall() else {
       Stderr.print("Failed to read request")
       return 1
     }
+    t.restart("Read all of stdin, \(requestData.count) bytes")
 
     // Support for loggin the request. Useful when protoc/protoc-gen-swift are
     // being invoked from some build system/script. protoc-gen-swift supports
@@ -159,8 +205,9 @@ struct GeneratorPlugin {
       Stderr.print("Request failed to decode: \(e)")
       return 1
     }
+    t.restart("Parsed the CodeGeneratorRequest Proto")
 
-    auditProtoCVersion(request: request)
+    //auditProtoCVersion(request: request)
     let response = generate(request: request)
     guard sendReply(response: response) else { return 1 }
     return 0
@@ -208,6 +255,7 @@ struct GeneratorPlugin {
   private func generate(
     request: Google_Protobuf_Compiler_CodeGeneratorRequest
   ) -> Google_Protobuf_Compiler_CodeGeneratorResponse {
+    var t = BlahBlah("Generate")
     let options: GeneratorOptions
     do {
       options = try GeneratorOptions(parameter: request.parameter)
@@ -224,7 +272,9 @@ struct GeneratorPlugin {
         error: "Internal Error parsing request options: \(e)")
     }
 
+    t.restart("Generation Options Created")
     let descriptorSet = DescriptorSet(protos: request.protoFile)
+    t.restart("Swift DesciptorSet Created")
 
     var errorString: String? = nil
     var responseFiles: [Google_Protobuf_Compiler_CodeGeneratorResponse.File] = []
@@ -241,6 +291,9 @@ struct GeneratorPlugin {
       responseFiles.append(
         Google_Protobuf_Compiler_CodeGeneratorResponse.File(name: fileGenerator.outputFilename,
                                                             content: printer.content))
+    }
+    defer {
+      t.restart("Done Generating \(responseFiles.count) file(s)")
     }
     return Google_Protobuf_Compiler_CodeGeneratorResponse(files: responseFiles)
   }
@@ -272,7 +325,12 @@ struct GeneratorPlugin {
 // MARK: - Hand off to the GeneratorPlugin
 
 // Drop the program name off to get the arguments only.
-let args: [String] = [String](CommandLine.arguments.dropFirst(1))
-let plugin = GeneratorPlugin()
-let result = plugin.run(args: args)
+var t = BlahBlah("protoc-gen-swift")
+let result: Int32
+do {
+  let args: [String] = [String](CommandLine.arguments.dropFirst(1))
+  let plugin = GeneratorPlugin()
+  result = plugin.run(args: args)
+}
+t.log("Total")
 exit(result)
