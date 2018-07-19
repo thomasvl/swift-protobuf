@@ -79,6 +79,10 @@ CONFORMANCE_HOST=${GOOGLE_PROTOBUF_CHECKOUT}/conformance/conformance-test-runner
 
 # Protos used for the unit and functional tests
 TEST_PROTOS= \
+	Protos/test_hooks_same_module2.proto \
+	Protos/test_hooks_same_module3.proto \
+	Protos/test_hooks_same_module2_heap_storage.proto \
+	Protos/test_hooks_same_module3_heap_storage.proto \
 	Protos/conformance/conformance.proto \
 	Protos/generated_swift_names_enums.proto \
 	Protos/generated_swift_names_enum_cases.proto \
@@ -135,6 +139,12 @@ TEST_PROTOS= \
 	Protos/unittest_swift_runtime_proto2.proto \
 	Protos/unittest_swift_runtime_proto3.proto \
 	Protos/unittest_swift_startup.proto
+
+TEST_PROTOS_OTHER_MODULE=\
+	Protos/test_hooks_cross_module2.proto \
+	Protos/test_hooks_cross_module3.proto \
+	Protos/test_hooks_cross_module2_heap_storage.proto \
+	Protos/test_hooks_cross_module3_heap_storage.proto
 
 # TODO: The library and plugin Protos come directly from google sources.
 # There should be an easy way to copy the Google versions from a protobuf
@@ -399,6 +409,11 @@ regenerate-test-protos: build ${PROTOC_GEN_SWIFT} Protos/generated_swift_names_e
 		--tfiws_opt=FileNaming=DropPath \
 		--tfiws_out=Tests/SwiftProtobufTests \
 		${TEST_PROTOS}
+	${GENERATE_SRCS} \
+		--tfiws_opt=FileNaming=DropPath \
+		--tfiws_opt=Visibility=Public \
+		--tfiws_out=Sources/SwiftProtobufTestSupport \
+		${TEST_PROTOS_OTHER_MODULE}
 
 Tests/SwiftProtobufPluginLibraryTests/DescriptorTestData.swift: build ${PROTOC_GEN_SWIFT} ${SWIFT_DESCRIPTOR_TEST_PROTOS}
 	@${PROTOC} \

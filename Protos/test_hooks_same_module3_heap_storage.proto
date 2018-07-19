@@ -1,0 +1,48 @@
+
+syntax = "proto3";
+
+package same_module3.heap_storage;
+
+
+message Msg {
+  int32 field1 = 1;
+  int32 field2 = 2;
+
+  // Forcing this message to use heap storage.
+  message Sub {
+    int32 a = 1;
+  }
+  Sub force_heap_storage = 3;
+}
+
+message MsgAsField {
+  Msg as_field = 1;
+}
+
+message MsgInArray {
+  repeated Msg inArray = 1;
+}
+
+message MsgInArrayInHeapStorage {
+  repeated Msg inArray = 1;
+
+  // Forcing this message to use heap storage.
+  message Sub {
+    int32 a = 1;
+  }
+  Sub force_heap_storage = 2;
+}
+
+message MsgInMap {
+  map<int32, Msg> in_map = 1;
+}
+
+message MsgInMapInHeapStorage {
+  map<int32, Msg> in_map = 1;
+
+  // Forcing this message to use heap storage.
+  message Sub {
+    int32 a = 1;
+  }
+  Sub force_heap_storage = 2;
+}

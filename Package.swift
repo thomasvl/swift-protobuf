@@ -14,6 +14,8 @@ let package = Package(
   targets: [
     Target(name: "SwiftProtobufPluginLibrary",
            dependencies: ["SwiftProtobuf"]),
+    Target(name: "SwiftProtobufTestSupport",
+           dependencies: ["SwiftProtobuf"]),
     Target(name: "protoc-gen-swift",
            dependencies: ["SwiftProtobufPluginLibrary", "SwiftProtobuf"]),
     Target(name: "Conformance",

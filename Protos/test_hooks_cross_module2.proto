@@ -1,0 +1,42 @@
+
+syntax = "proto2";
+
+package cross_module2;
+
+
+message Msg {
+  optional int32 field1 = 1;
+  optional int32 field2 = 2;
+}
+
+message MsgAsField {
+  optional Msg as_field = 1;
+}
+
+message MsgInArray {
+  repeated Msg inArray = 1;
+}
+
+message MsgInArrayInHeapStorage {
+  repeated Msg inArray = 1;
+
+  // Forcing this message to use heap storage.
+  message Sub {
+    optional int32 a = 1;
+  }
+  optional Sub force_heap_storage = 2;
+}
+
+message MsgInMap {
+  map<int32, Msg> in_map = 1;
+}
+
+message MsgInMapInHeapStorage {
+  map<int32, Msg> in_map = 1;
+
+  // Forcing this message to use heap storage.
+  message Sub {
+    optional int32 a = 1;
+  }
+  optional Sub force_heap_storage = 2;
+}
