@@ -12,9 +12,8 @@ extension CrossModule2_HeapStorage_Msg {
     return field1.hashValue
   }
 
-  func isEqualTo(message: CrossModule2_HeapStorage_Msg) -> Bool {
-    print("CrossModule2_HeapStorage_Msg.isEqualTo(message:) called!")
-    return hasField1 == message.hasField1 && field1 == message.field1
+  static func ==(lhs: CrossModule2_HeapStorage_Msg, rhs: CrossModule2_HeapStorage_Msg) -> Bool {
+    return lhs.hasField1 == rhs.hasField1 && lhs.field1 == rhs.field1
   }
 }
 
@@ -40,6 +39,7 @@ class TestHooks_CrossModule2_HeapStorage: XCTestCase {
   // --------------------------------------------------------------------------------------
 
   func testMsg() {
+    XCTAssertTrue(msgA == msgB)
     XCTAssertEqual(msgA, msgB)  // Fails: 9.0.1, 9.4.1, 10.0b4
     XCTAssertEqual(msgA.hashValue, msgB.hashValue)
     XCTAssertTrue(msgA.isEqualTo(message: msgB))

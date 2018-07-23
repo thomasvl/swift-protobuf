@@ -9,9 +9,8 @@ extension SameModule3_Msg {
     return field1.hashValue
   }
 
-  func isEqualTo(message: SameModule3_Msg) -> Bool {
-    print("SameModule3_Msg.isEqualTo(message:) called!")
-    return field1 == message.field1
+  static func ==(lhs: SameModule3_Msg, rhs: SameModule3_Msg) -> Bool {
+    return lhs.field1 == rhs.field1
   }
 }
 
@@ -37,6 +36,7 @@ class TestHooks_SameModule3: XCTestCase {
   // --------------------------------------------------------------------------------------
 
   func testMsg() {
+    XCTAssertTrue(msgA == msgB)
     XCTAssertEqual(msgA, msgB)  // Fails: 8.3.3, 9.0.1, 9.4.1, 10.0b4
     XCTAssertEqual(msgA.hashValue, msgB.hashValue)
     XCTAssertTrue(msgA.isEqualTo(message: msgB))

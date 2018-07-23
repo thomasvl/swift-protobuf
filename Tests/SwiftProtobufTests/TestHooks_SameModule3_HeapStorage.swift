@@ -9,9 +9,8 @@ extension SameModule3_HeapStorage_Msg {
     return field1.hashValue
   }
 
-  func isEqualTo(message: SameModule3_HeapStorage_Msg) -> Bool {
-    print("SameModule3_HeapStorage_Msg.isEqualTo(message:) called!")
-    return field1 == message.field1
+  static func ==(lhs: SameModule3_HeapStorage_Msg, rhs: SameModule3_HeapStorage_Msg) -> Bool {
+    return lhs.field1 == rhs.field1
   }
 }
 

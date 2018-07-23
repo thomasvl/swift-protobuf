@@ -9,9 +9,8 @@ extension SameModule2_HeapStorage_Msg {
     return field1.hashValue
   }
 
-  func isEqualTo(message: SameModule2_HeapStorage_Msg) -> Bool {
-    print("SameModule2_HeapStorage_Msg.isEqualTo(message:) called!")
-    return hasField1 == message.hasField1 && field1 == message.field1
+  static func ==(lhs: SameModule2_HeapStorage_Msg, rhs: SameModule2_HeapStorage_Msg) -> Bool {
+    return lhs.hasField1 == rhs.hasField2 && lhs.field1 == rhs.field1
   }
 }
 
@@ -37,6 +36,7 @@ class TestHooks_SameModule2_HeapStorage: XCTestCase {
   // --------------------------------------------------------------------------------------
 
   func testMsg() {
+    XCTAssertTrue(msgA == msgB)
     XCTAssertEqual(msgA, msgB)  // Fails: 8.3.3, 9.0.1, 9.4.1, 10.0b4
     XCTAssertEqual(msgA.hashValue, msgB.hashValue)
     XCTAssertTrue(msgA.isEqualTo(message: msgB))
