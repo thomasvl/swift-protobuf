@@ -526,6 +526,10 @@
 		F4C3A9711E96A08E006BB610 /* unittest_swift_oneof_all_required.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3A96F1E969F79006BB610 /* unittest_swift_oneof_all_required.pb.swift */; };
 		F4C3A9721E96A08F006BB610 /* unittest_swift_oneof_all_required.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3A96F1E969F79006BB610 /* unittest_swift_oneof_all_required.pb.swift */; };
 		F4C3A9731E96A090006BB610 /* unittest_swift_oneof_all_required.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3A96F1E969F79006BB610 /* unittest_swift_oneof_all_required.pb.swift */; };
+		F4CCC117210F80BD000C4180 /* AnyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCC116210F80BC000C4180 /* AnyMessage.swift */; };
+		F4CCC118210F80BD000C4180 /* AnyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCC116210F80BC000C4180 /* AnyMessage.swift */; };
+		F4CCC119210F80BD000C4180 /* AnyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCC116210F80BC000C4180 /* AnyMessage.swift */; };
+		F4CCC11A210F80BD000C4180 /* AnyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCC116210F80BC000C4180 /* AnyMessage.swift */; };
 		F4D315471DEC8117005D4A80 /* unittest_swift_extension2.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D315431DEC8110005D4A80 /* unittest_swift_extension2.pb.swift */; };
 		F4D315481DEC8117005D4A80 /* unittest_swift_extension3.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D315441DEC8110005D4A80 /* unittest_swift_extension3.pb.swift */; };
 		F4D315491DEC811B005D4A80 /* unittest_swift_extension2.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D315431DEC8110005D4A80 /* unittest_swift_extension2.pb.swift */; };
@@ -760,6 +764,7 @@
 		F4A07B2A1E4A3E500035678A /* test_messages_proto3.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test_messages_proto3.pb.swift; sourceTree = "<group>"; };
 		F4A1A8AB1E65E2EA0022E078 /* map_proto2_unittest.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = map_proto2_unittest.pb.swift; sourceTree = "<group>"; };
 		F4C3A96F1E969F79006BB610 /* unittest_swift_oneof_all_required.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = unittest_swift_oneof_all_required.pb.swift; sourceTree = "<group>"; };
+		F4CCC116210F80BC000C4180 /* AnyMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyMessage.swift; sourceTree = "<group>"; };
 		F4D315431DEC8110005D4A80 /* unittest_swift_extension2.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = unittest_swift_extension2.pb.swift; sourceTree = "<group>"; };
 		F4D315441DEC8110005D4A80 /* unittest_swift_extension3.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = unittest_swift_extension3.pb.swift; sourceTree = "<group>"; };
 		F4D315521DECA0E5005D4A80 /* unittest_swift_extension4.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = unittest_swift_extension4.pb.swift; sourceTree = "<group>"; };
@@ -943,6 +948,7 @@
 			isa = PBXGroup;
 			children = (
 				F41BA43F1E7AE4AC004F6E95 /* any.pb.swift */,
+				F4CCC116210F80BC000C4180 /* AnyMessage.swift */,
 				F41BA4411E7AE53C004F6E95 /* AnyMessageStorage.swift */,
 				F41BA4171E79C568004F6E95 /* AnyUnpackError.swift */,
 				__PBXFileRef_Sources/Protobuf/api.pb.swift /* api.pb.swift */,
@@ -1514,6 +1520,7 @@
 				9C667A921E4C203D008B974F /* JSONDecodingError.swift in Sources */,
 				F44F93691DAD7FA500BC5B85 /* Google_Protobuf_Wrappers+Extensions.swift in Sources */,
 				9C667A9A1E4C203D008B974F /* TextFormatDecodingError.swift in Sources */,
+				F4CCC118210F80BD000C4180 /* AnyMessage.swift in Sources */,
 				9C75F8901DDD3108005CCFF2 /* ExtensibleMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1597,6 +1604,7 @@
 				9C75F8801DDBE0DE005CCFF2 /* Visitor.swift in Sources */,
 				AA05BF4A1DAEB7E400619042 /* WireFormat.swift in Sources */,
 				AAEA52741DA80DEA003F318F /* wrappers.pb.swift in Sources */,
+				F4CCC117210F80BD000C4180 /* AnyMessage.swift in Sources */,
 				AA28A4A61DA30E5900C866D9 /* ZigZag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1797,6 +1805,7 @@
 				9C667A931E4C203D008B974F /* JSONDecodingError.swift in Sources */,
 				F44F93881DAEA76700BC5B85 /* ExtensionFields.swift in Sources */,
 				9C667A9B1E4C203D008B974F /* TextFormatDecodingError.swift in Sources */,
+				F4CCC119210F80BD000C4180 /* AnyMessage.swift in Sources */,
 				9C75F8911DDD3108005CCFF2 /* ExtensibleMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1997,6 +2006,7 @@
 				9C667A941E4C203D008B974F /* JSONDecodingError.swift in Sources */,
 				ECBC5C511DF6ABC500F658E8 /* wrappers.pb.swift in Sources */,
 				9C667A9C1E4C203D008B974F /* TextFormatDecodingError.swift in Sources */,
+				F4CCC11A210F80BD000C4180 /* AnyMessage.swift in Sources */,
 				ECBC5C4F1DF6ABC500F658E8 /* ZigZag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
