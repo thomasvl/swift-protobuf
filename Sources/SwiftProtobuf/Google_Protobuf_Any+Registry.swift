@@ -51,7 +51,56 @@ internal func typeName(fromURL s: String) -> String {
   return String(s[typeStart..<s.endIndex])
 }
 
+internal struct MessageInfo {
+  private let msgInit: () -> Message
+  private let msgInitJSON: (Data, JSONDecodingOptions) throws -> Message
+  private let msgInitBinary: (Data, Bool) throws -> Message
+
+  init(_ messageType: Message.Type) {
+    msgInit = { () -> Message in
+      return messageType.init()
+    }
+    msgInitJSON = { (data, options) throws -> Message in
+      return try messageType.init(jsonUTF8Data: data, options: options)
+    }
+    msgInitBinary = { (data, partial) throws -> Message in
+      return try messageType.init(serializedData: data, partial: partial)
+    }
+  }
+
+  func instance() -> Message {
+    return msgInit()
+  }
+  func instance(jsonData data: Data, options: JSONDecodingOptions) throws -> Message {
+    return try msgInitJSON(data, options)
+  }
+  func instance(serializedData data: Data, partial: Bool) throws -> Message {
+    return try msgInitBinary(data, partial)
+  }
+}
+
 fileprivate var serialQueue = DispatchQueue(label: "org.swift.protobuf.typeRegistry")
+
+fileprivate var typeRegistry: [String:MessageInfo] = [
+  // Seeded with the Well Known Types.
+  "google.protobuf.Any": MessageInfo(Google_Protobuf_Any.self),
+  "google.protobuf.BoolValue": MessageInfo(Google_Protobuf_BoolValue.self),
+  "google.protobuf.BytesValue": MessageInfo(Google_Protobuf_BytesValue.self),
+  "google.protobuf.DoubleValue": MessageInfo(Google_Protobuf_DoubleValue.self),
+  "google.protobuf.Duration": MessageInfo(Google_Protobuf_Duration.self),
+  "google.protobuf.Empty": MessageInfo(Google_Protobuf_Empty.self),
+  "google.protobuf.FieldMask": MessageInfo(Google_Protobuf_FieldMask.self),
+  "google.protobuf.FloatValue": MessageInfo(Google_Protobuf_FloatValue.self),
+  "google.protobuf.Int32Value": MessageInfo(Google_Protobuf_Int32Value.self),
+  "google.protobuf.Int64Value": MessageInfo(Google_Protobuf_Int64Value.self),
+  "google.protobuf.ListValue": MessageInfo(Google_Protobuf_ListValue.self),
+  "google.protobuf.StringValue": MessageInfo(Google_Protobuf_StringValue.self),
+  "google.protobuf.Struct": MessageInfo(Google_Protobuf_Struct.self),
+  "google.protobuf.Timestamp": MessageInfo(Google_Protobuf_Timestamp.self),
+  "google.protobuf.UInt32Value": MessageInfo(Google_Protobuf_UInt32Value.self),
+  "google.protobuf.UInt64Value": MessageInfo(Google_Protobuf_UInt64Value.self),
+  "google.protobuf.Value": MessageInfo(Google_Protobuf_Value.self),
+]
 
 // All access to this should be done on `serialQueue`.
 fileprivate var knownTypes: [String:Message.Type] = [
@@ -104,7 +153,7 @@ public extension Google_Protobuf_Any {
     ///
     /// Returns: true if the type was registered, false if something
     ///   else was already registered for the messageName.
-    @discardableResult static public func register(messageType: Message.Type) -> Bool {
+    @discardableResult static public func register<M: Message>(messageType: M.Type) -> Bool {
         let messageTypeName = messageType.protoMessageName
         var result: Bool = false
         serialQueue.sync {
@@ -115,25 +164,48 @@ public extension Google_Protobuf_Any {
                 result = alreadyRegistered == messageType
             } else {
                 knownTypes[messageTypeName] = messageType
+                typeRegistry[messageTypeName] = MessageInfo(messageType)
                 result = true
             }
         }
         return result
     }
 
-    /// Returns the Message.Type expected for the given type URL.
+    /// ###Returns the Message.Type expected for the given type URL.
     static public func messageType(forTypeURL url: String) -> Message.Type? {
       let messageTypeName = typeName(fromURL: url)
-      return messageType(forMessageName: messageTypeName)
-    }
-
-    /// Returns the Message.Type expected for the given proto message name.
-    static public func messageType(forMessageName name: String) -> Message.Type? {
         var result: Message.Type?
         serialQueue.sync {
-            result = knownTypes[name]
+            result = knownTypes[messageTypeName]
         }
         return result
+    }
+
+    /// Looks up the creator closure
+    static internal func messageInfo(forTypeURL url: String) -> MessageInfo? {
+        let messageTypeName = typeName(fromURL: url)
+        return messageInfo(forMessageName: messageTypeName)
+    }
+
+    static internal func messageInfo(forMessageName name: String) -> MessageInfo? {
+      var result: MessageInfo?
+      serialQueue.sync {
+        result = typeRegistry[name]
+      }
+      return result
+    }
+
+    /// Returns True/False if a Message type has been registered for the
+    /// given type URL.
+    static public func isMessageTypeRegistered(forTypeURL url: String) -> Bool {
+        let messageTypeName = typeName(fromURL: url)
+        return isMessageTypeRegistered(forMessageName: messageTypeName)
+    }
+
+    /// Returns True/False if a Message type has been registered for the
+    /// given message name.
+    static public func isMessageTypeRegistered(forMessageName name: String) -> Bool {
+        return messageInfo(forMessageName: name) != nil
     }
 
 }

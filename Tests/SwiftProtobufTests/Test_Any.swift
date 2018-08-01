@@ -678,8 +678,8 @@ class Test_Any: XCTestCase {
       XCTAssertEqual(ConflictingImportMessage.protoMessageName, ProtobufUnittestImport_ImportMessage.protoMessageName)
 
       // Lookup
-      XCTAssertTrue(Google_Protobuf_Any.messageType(forMessageName: ProtobufUnittestImport_ImportMessage.protoMessageName) == ProtobufUnittestImport_ImportMessage.self)
-      XCTAssertNil(Google_Protobuf_Any.messageType(forMessageName: ProtobufUnittest_TestMap.protoMessageName))
+      XCTAssertTrue(Google_Protobuf_Any.isMessageTypeRegistered(forMessageName: ProtobufUnittestImport_ImportMessage.protoMessageName));
+      XCTAssertFalse(Google_Protobuf_Any.isMessageTypeRegistered(forMessageName: ProtobufUnittest_TestMap.protoMessageName))
 
       // All the WKTs should be registered.
       let wkts: [Message.Type] = [
@@ -702,7 +702,7 @@ class Test_Any: XCTestCase {
         Google_Protobuf_Value.self,
       ]
       for t in wkts {
-        XCTAssertTrue(Google_Protobuf_Any.messageType(forMessageName: t.protoMessageName) == t,
+        XCTAssertTrue(Google_Protobuf_Any.isMessageTypeRegistered(forMessageName: t.protoMessageName),
                       "Looking up \(t.protoMessageName)")
       }
     }

@@ -198,7 +198,7 @@ internal class AnyMessageStorage {
     case .contentJSON:
       // contentJSON requires a good URL and our ability to look up
       // the message type to transcode.
-      if Google_Protobuf_Any.messageType(forTypeURL: _typeURL) == nil {
+      guard Google_Protobuf_Any.isMessageTypeRegistered(forTypeURL: _typeURL) else {
         // Isn't registered, we can't transform it for binary.
         throw BinaryEncodingError.anyTranscodeFailure
       }
@@ -239,10 +239,10 @@ extension AnyMessageStorage {
   internal func textTraverse(visitor: inout TextFormatEncodingVisitor) {
     switch state {
     case .binary(let valueData):
-      if let messageType = Google_Protobuf_Any.messageType(forTypeURL: _typeURL) {
+      if let messageInfo = Google_Protobuf_Any.messageInfo(forTypeURL: _typeURL) {
         // If we can decode it, we can write the readable verbose form:
         do {
-          let m = try messageType.init(serializedData: valueData, partial: true)
+          let m = try messageInfo.instance(serializedData: valueData, partial: true)
           emitVerboseTextForm(visitor: &visitor, message: m, typeURL: _typeURL)
           return
         } catch {
@@ -375,14 +375,14 @@ extension AnyMessageStorage {
     case .binary(let valueData):
       // Transcode by decoding the binary data to a message object
       // and then recode back into JSON.
-      guard let messageType = Google_Protobuf_Any.messageType(forTypeURL: _typeURL) else {
+      guard let messageInfo = Google_Protobuf_Any.messageInfo(forTypeURL: _typeURL) else {
         // If we don't have the type available, we can't decode the
         // binary value, so we're stuck.  (The Google spec does not
         // provide a way to just package the binary value for someone
         // else to decode later.)
         throw JSONEncodingError.anyTranscodeFailure
       }
-      let m = try messageType.init(serializedData: valueData, partial: true)
+      let m = try messageInfo.instance(serializedData: valueData, partial: true)
       return try serializeAnyJSON(for: m, typeURL: _typeURL)
 
     case .message(let msg):
