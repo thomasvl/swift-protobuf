@@ -73,7 +73,8 @@ fileprivate func unpack(contentJSON: Data,
       let buffer = UnsafeBufferPointer(start: bytes, count: body.count)
       var scanner = JSONScanner(source: buffer,
                                 messageDepthLimit: options.messageDepthLimit,
-                                ignoreUnknownFields: options.ignoreUnknownFields)
+                                ignoreUnknownFields: options.ignoreUnknownFields,
+                                ignoreUnknownEnumValues: options.ignoreUnknownEnumValues)
       let key = try scanner.nextQuotedString()
       if key != "value" {
         // The only thing within a WKT should be "value".
