@@ -208,9 +208,9 @@ extension PBTestHelpers where MessageTestType: SwiftProtobuf.Message & Equatable
         }
     }
 
-    func assertJSONDecodeSucceeds(_ json: String, file: XCTestFileArgType = #file, line: UInt = #line, check: (MessageTestType) -> Bool) {
+    func assertJSONDecodeSucceeds(_ json: String, options: JSONDecodingOptions = JSONDecodingOptions(), file: XCTestFileArgType = #file, line: UInt = #line, check: (MessageTestType) -> Bool) {
         do {
-            let decoded: MessageTestType = try MessageTestType(jsonString: json)
+            let decoded: MessageTestType = try MessageTestType(jsonString: json, options: options)
             XCTAssert(check(decoded), "Condition failed for \(decoded)", file: file, line: line)
 
             do {

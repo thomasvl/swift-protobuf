@@ -377,6 +377,7 @@ internal struct JSONScanner {
   internal var recursionLimit: Int
   internal var recursionBudget: Int
   private var ignoreUnknownFields: Bool
+  private var ignoreUnknownEnumValues: Bool
 
   /// True if the scanner has read all of the data from the source, with the
   /// exception of any trailing whitespace (which is consumed by reading this
@@ -401,13 +402,15 @@ internal struct JSONScanner {
   internal init(
     source: UnsafeRawBufferPointer,
     messageDepthLimit: Int,
-    ignoreUnknownFields: Bool
+    ignoreUnknownFields: Bool,
+    ignoreUnknownEnumValues: Bool
   ) {
     self.source = source
     self.index = source.startIndex
     self.recursionLimit = messageDepthLimit
     self.recursionBudget = messageDepthLimit
     self.ignoreUnknownFields = ignoreUnknownFields
+    self.ignoreUnknownEnumValues = ignoreUnknownEnumValues
   }
 
   private mutating func incrementRecursionDepth() throws {
@@ -1285,7 +1288,14 @@ internal struct JSONScanner {
   /// Parse the next token as a string or numeric enum value.  Throws
   /// unrecognizedEnumValue if the string/number can't initialize the
   /// enum.  Will throw other errors if the JSON is malformed.
-  internal mutating func nextEnumValue<E: Enum>() throws -> E {
+  internal mutating func nextEnumValue<E: Enum>() throws -> E? {
+    func throwOrIgnore() throws -> E? {
+      if ignoreUnknownEnumValues {
+        return nil
+      } else {
+        throw JSONDecodingError.unrecognizedEnumValue
+      }
+    }
     skipWhitespace()
     guard hasMoreContent else {
         throw JSONDecodingError.truncated
@@ -1295,14 +1305,14 @@ internal struct JSONScanner {
         if let e = E(rawUTF8: name) {
           return e
         } else {
-          throw JSONDecodingError.unrecognizedEnumValue
+          return try throwOrIgnore()
         }
       }
       let name = try nextQuotedString()
       if let e = E(name: name) {
         return e
       } else {
-        throw JSONDecodingError.unrecognizedEnumValue
+        return try throwOrIgnore()
       }
     } else {
       let n = try nextSInt()
@@ -1310,7 +1320,7 @@ internal struct JSONScanner {
         if let e = E(rawValue: i) {
           return e
         } else {
-          throw JSONDecodingError.unrecognizedEnumValue
+          return try throwOrIgnore()
         }
       } else {
         throw JSONDecodingError.numberRange

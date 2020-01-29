@@ -25,5 +25,9 @@ public struct JSONDecodingOptions {
   /// ignored, an error will be raised if one is encountered.
   public var ignoreUnknownFields: Bool = false
 
+  /// If unknown enum cases in the JSON should be defaulted to initial enum case.
+  /// If they aren't ignored, an error will be raised if one is encountered.
+  public var ignoreUnknownEnumValues: Bool = false
+
   public init() {}
 }
