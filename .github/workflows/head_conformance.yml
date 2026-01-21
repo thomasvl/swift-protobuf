@@ -41,6 +41,12 @@ jobs:
       with:
         repository: protocolbuffers/protobuf
         path: protobuf
+    - name: Cache protobuf CMake Build
+      id: cache-protobuf
+      uses: actions/cache@v5
+      with:
+        path: protobuf/cmake_build
+        key: ${{ runner.os }}-protobuf-cmake-head_conformance
     - name: Build protobuf
       working-directory: protobuf
       # https://github.com/protocolbuffers/protobuf/blob/main/cmake/README.md#c-version
