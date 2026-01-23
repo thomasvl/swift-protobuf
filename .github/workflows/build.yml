@@ -5,7 +5,7 @@ permissions:
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, ci_cache ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
@@ -47,6 +47,22 @@ jobs:
       #
       # `make` is needed for using our own `Makefile`.
       run: apt-get update && apt-get install -y make g++
+    - name: Get Submodule Commit SHAs
+      id: get-shas
+      run: |
+        set -eu
+        # Avoid "fatal: detected dubious ownership in repository at '/__w/swift-protobuf/swift-protobuf'"
+        git config --global --add safe.directory /__w/swift-protobuf/swift-protobuf
+        echo "abseil=$( git log -n 1 --pretty=format:%H -- Sources/protobuf/abseil )" >> $GITHUB_OUTPUT
+        echo "protobuf=$( git log -n 1 --pretty=format:%H -- Sources/protobuf/protobuf )" >> $GITHUB_OUTPUT
+    - uses: actions/cache@v5
+      with:
+        path: .build
+        key: ${{ runner.os }}-spm-build-${{ matrix.swift.version}}-${{ steps.get-shas.outputs.abseil }}-${{ steps.get-shas.outputs.protobuf }}
+        restore-keys: |
+          ${{ runner.os }}-spm-build-${{ matrix.swift.version}}-${{ steps.get-shas.outputs.abseil }}-${{ steps.get-shas.outputs.protobuf }}
+          ${{ runner.os }}-spm-build-${{ matrix.swift.version}}-${{ steps.get-shas.outputs.abseil }}
+          ${{ runner.os }}-spm-build-${{ matrix.swift.version}}
     - name: Build
       run: make build ${{ matrix.swift.hook }}
     - name: Test runtime
