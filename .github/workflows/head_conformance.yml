@@ -11,7 +11,7 @@ permissions:
 
 on:
   push:
-    branches: [ main ]
+    branches: [ zzzzzmain ]
   pull_request:
     branches: [ main ]
   # Every Sunday at 5am to get warning on any new conformance tests upstream.
