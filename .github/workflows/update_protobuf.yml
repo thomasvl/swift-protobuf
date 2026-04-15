@@ -13,7 +13,7 @@ on:
 jobs:
   check-and-update:
     # Only do this job on the main repo (and not forks of it).
-    if: github.repository == 'apple/swift-protobuf'
+    ### if: github.repository == 'apple/swift-protobuf'
     runs-on: ubuntu-latest
     # Ensure we have the latest Swift in case Reference can be updated.
     container:
@@ -38,10 +38,15 @@ jobs:
       # The Reference/upstream contents is generated from Source/protobuf/protobuf, so
       # update them.
       #
+      # If this fails, it likely means protobuf and/or abseil have changed and
+      # Package.swift need to be updated. In that case, we'll revert Reference/ and let
+      # the PR get created, it will fail CI, but serve as a notice that something needs
+      # to be done to update things.
+      #
       # Note: we could move the work in `make reference` to a helper script and skip the
       # install of Make, but given it shares setup with other targets in the Makefile,
       # not sure it's worth while.
-      run: make reference
+      run: make reference || git checkout -- Reference
 
     - name: Create Pull Request
       if: steps.update.outputs.updated == 'true'
