@@ -81,56 +81,62 @@ internal struct BinaryEncoder {
         putVarInt(value: UInt64(tag.rawValue))
     }
 
-    // inline never like upb?
-    mutating func putVarInt(largeValue value: UInt64) {
-        // Based on upb's `encode_longvarint()` arm64 assembly code (jump table)
+    @inline(__always)
+    mutating func putVarInt(value: UInt64) {
+        if value < 0x80 {
+            pointer.storeBytes(of: UInt8(truncatingIfNeeded: value), as: UInt8.self)
+            pointer += 1
+        } else {
+            pointer = Self.putVarIntSlow(value, to: pointer)
+        }
+    }
+
+    @inline(never)
+    private static func putVarIntSlow(
+        _ value: UInt64,
+        to p: UnsafeMutableRawPointer
+    ) -> UnsafeMutableRawPointer {
         let numBytes = Varint.encodedSize(of: value)
-        switch 10 - numBytes {
-        case 0:
-            pointer.storeBytes(of: UInt8(truncatingIfNeeded: ((value >> 56) | 0x80)), toByteOffset: 8, as: UInt8.self)
+        switch numBytes {
+        case 10:
+            p.storeBytes(of: UInt8(truncatingIfNeeded: (value >> 56) | 0x80), toByteOffset: 8, as: UInt8.self)
             fallthrough
-        case 1:
-            pointer.storeBytes(of: UInt8(truncatingIfNeeded: ((value >> 49) | 0x80)), toByteOffset: 7, as: UInt8.self)
-            fallthrough
-        case 2:
-            pointer.storeBytes(of: UInt8(truncatingIfNeeded: ((value >> 42) | 0x80)), toByteOffset: 6, as: UInt8.self)
-            fallthrough
-        case 3:
-            pointer.storeBytes(of: UInt8(truncatingIfNeeded: ((value >> 35) | 0x80)), toByteOffset: 5, as: UInt8.self)
-            fallthrough
-        case 4:
-            pointer.storeBytes(of: UInt8(truncatingIfNeeded: ((value >> 28) | 0x80)), toByteOffset: 4, as: UInt8.self)
-            fallthrough
-        case 5:
-            pointer.storeBytes(of: UInt8(truncatingIfNeeded: ((value >> 21) | 0x80)), toByteOffset: 3, as: UInt8.self)
-            fallthrough
-        case 6:
-            pointer.storeBytes(of: UInt8(truncatingIfNeeded: ((value >> 14) | 0x80)), toByteOffset: 2, as: UInt8.self)
-            fallthrough
-        case 7:
-            pointer.storeBytes(of: UInt8(truncatingIfNeeded: ((value >> 7) | 0x80)), toByteOffset: 1, as: UInt8.self)
+        case 9:
+            p.storeBytes(of: UInt8(truncatingIfNeeded: (value >> 49) | 0x80), toByteOffset: 7, as: UInt8.self)
             fallthrough
         case 8:
-            pointer.storeBytes(of: UInt8(truncatingIfNeeded: (value | 0x80)), toByteOffset: 0, as: UInt8.self)
+            p.storeBytes(of: UInt8(truncatingIfNeeded: (value >> 42) | 0x80), toByteOffset: 6, as: UInt8.self)
             fallthrough
-        default:
-            assert(1 <= numBytes && numBytes <= 10, "Unexpected size for a varint")
+        case 7:
+            p.storeBytes(of: UInt8(truncatingIfNeeded: (value >> 35) | 0x80), toByteOffset: 5, as: UInt8.self)
+            fallthrough
+        case 6:
+            p.storeBytes(of: UInt8(truncatingIfNeeded: (value >> 28) | 0x80), toByteOffset: 4, as: UInt8.self)
+            fallthrough
+        case 5:
+            p.storeBytes(of: UInt8(truncatingIfNeeded: (value >> 21) | 0x80), toByteOffset: 3, as: UInt8.self)
+            fallthrough
+        case 4:
+            p.storeBytes(of: UInt8(truncatingIfNeeded: (value >> 14) | 0x80), toByteOffset: 2, as: UInt8.self)
+            fallthrough
+        case 3:
+            p.storeBytes(of: UInt8(truncatingIfNeeded: (value >> 7) | 0x80), toByteOffset: 1, as: UInt8.self)
+            fallthrough
+        case 2:
+            p.storeBytes(of: UInt8(truncatingIfNeeded: value | 0x80), toByteOffset: 0, as: UInt8.self)
+            fallthrough
+        case 1:
             let continuations = numBytes - 1
-            pointer.storeBytes(of: UInt8(truncatingIfNeeded: (value >> (7 * continuations))), toByteOffset: continuations, as: UInt8.self)
-            pointer = pointer.advanced(by: numBytes)
+            p.storeBytes(
+                of: UInt8(truncatingIfNeeded: value >> (7 * continuations)),
+                toByteOffset: continuations,
+                as: UInt8.self
+            )
+            return p + numBytes
+        default:
+            return p
         }
     }
-
-    // always inline like upb?
-    mutating func putVarInt(value: UInt64) {
-        // Fast path the trivial case.
-        if value < 128 {
-            append(UInt8(value))
-        } else {
-            putVarInt(largeValue: value)
-        }
-    }
-
 
     @inline(__always)
     mutating func putVarInt(value: Int64) {
